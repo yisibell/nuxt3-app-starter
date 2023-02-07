@@ -8,6 +8,7 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "cz-conventional-changelog": "^3.3.0",
     "nuxt": "^3.1.2"
   }
 }
