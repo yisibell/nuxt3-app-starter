@@ -1,11 +1,9 @@
 <template>
-  <div>
-    <NuxtWelcome />
-  </div>
+  <NuxtLayout><NuxtPage /></NuxtLayout>
 </template>
 
 <script setup lang="ts">
 onMounted(() => {
-  console.log(9527)
+  console.log('nuxt app entrypoint!!!')
 })
 </script>
