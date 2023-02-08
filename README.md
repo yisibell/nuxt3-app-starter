@@ -16,7 +16,7 @@ yarn install
 Start the development server on http://localhost:3000
 
 ```bash
-npm run dev
+$ yarn dev
 ```
 
 ## Production
@@ -24,12 +24,22 @@ npm run dev
 Build the application for production:
 
 ```bash
-npm run build
+$ yarn build:prod
+
+# or ft environment
+$ yarn build:ft
 ```
 
 Locally preview production build:
 
 ```bash
-npm run preview
+$ yarn preview
 ```
+
+Start the node server:
+
+``` bash
+$ yarn start
+```
+
 

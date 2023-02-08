@@ -1,5 +1,6 @@
 {
   "name": "nuxt3-app-starter",
+  "version": "1.0.0",
   "description": "A Nuxt(3) app starter!",
   "author": {
     "name": "elenh",
@@ -18,19 +19,26 @@
   },
   "homepage": "https://github.com/yisibell/nuxt3-app-starter",
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
+    "dev": "node ./scripts/dev.mjs",
+    "build:ft": "node ./scripts/build.mjs --env=ft",
+    "build:prod": "node ./scripts/build.mjs --env=production",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
+    "start": "node ./.output/server/index.mjs",
     "lint": "eslint ."
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
     "@nuxt/eslint-config": "^0.1.1",
+    "@types/lodash": "^4.14.191",
+    "cross-env": "^7.0.3",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.33.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "execa": "^6.1.0",
+    "minimist": "^1.2.7",
     "nuxt": "^3.1.2",
     "prettier": "^2.8.3"
   },
