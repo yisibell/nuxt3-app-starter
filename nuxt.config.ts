@@ -12,4 +12,5 @@ export default defineNuxtConfig({
   telemetry: false,
   srcDir: 'src/',
   appConfig: publicRuntimeConfig,
+  modules: ['@pinia/nuxt'],
 })
