@@ -33,6 +33,7 @@
   },
   "devDependencies": {
     "@nuxt/eslint-config": "^0.1.1",
+    "@pinia-plugin-persistedstate/nuxt": "^1.0.0",
     "@types/lodash": "^4.14.191",
     "cross-env": "^7.0.3",
     "cz-conventional-changelog": "^3.3.0",
