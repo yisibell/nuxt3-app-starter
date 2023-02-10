@@ -9,7 +9,7 @@
 </template>
 
 <script setup>
-import NormalButton from '~/normal-components/normal/Button.vue'
+import NormalButton from '~/explicit-components/normal/Button.vue'
 import { useSiteStore } from '~/store/site'
 
 definePageMeta({
