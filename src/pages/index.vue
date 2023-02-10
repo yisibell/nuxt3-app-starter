@@ -19,7 +19,6 @@ definePageMeta({
 const siteStore = useSiteStore()
 
 onMounted(() => {
-  console.log('this is home page!')
   siteStore.setToken('this is a demo token')
 })
 </script>

@@ -18,6 +18,8 @@ export const useSiteStore = defineStore(
     persist: {
       storage: persistedState.cookiesWithOptions({
         sameSite: 'strict',
+        maxAge: 60 * 60 * 24 * 365, // 1 年有效期
+        secure: false,
       }),
     },
   }

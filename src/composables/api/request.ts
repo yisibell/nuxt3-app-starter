@@ -1,8 +1,19 @@
-const useRequest = () => {
-  const appConfig = useAppConfig()
+import { useSiteStore } from '~/store/site'
+export interface IRequestResponse<T> {
+  data: T
+  message: string
+  status: number
+}
 
-  const apiFetch = $fetch.create({
+const useRequest = <T>() => {
+  const appConfig = useAppConfig()
+  const siteStore = useSiteStore()
+
+  const apiFetch = $fetch.create<IRequestResponse<T>>({
     baseURL: appConfig.NUXT_APP_BASE_API,
+    headers: {
+      token: siteStore.token,
+    },
     async onRequest({ request, options }) {
       // Log request
       console.log('[fetch request]', request, options)
