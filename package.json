@@ -24,14 +24,19 @@
     "build:ft": "node ./scripts/build.mjs --env=ft",
     "build:prod": "node ./scripts/build.mjs --env=production",
     "preview": "nuxt preview",
+    "prepare": "nuxt prepare",
+    "cleanup": "nuxt cleanup",
     "start": "node ./.output/server/index.mjs",
     "lint": "eslint ."
   },
   "dependencies": {
+    "@element-plus/icons-vue": "^2.0.10",
     "@pinia/nuxt": "^0.4.6",
+    "element-plus": "^2.2.30",
     "lodash": "^4.17.21"
   },
   "devDependencies": {
+    "@element-plus/nuxt": "^1.0.3",
     "@nuxt/eslint-config": "^0.1.1",
     "@pinia-plugin-persistedstate/nuxt": "^1.0.0",
     "@types/lodash": "^4.14.191",
@@ -43,7 +48,8 @@
     "execa": "^6.1.0",
     "minimist": "^1.2.7",
     "nuxt": "^3.1.2",
-    "prettier": "^2.8.3"
+    "prettier": "^2.8.3",
+    "sass": "^1.58.0"
   },
   "engines": {
     "node": ">=18.x"

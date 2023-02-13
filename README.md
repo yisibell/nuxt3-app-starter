@@ -1,6 +1,6 @@
 # nuxt3-app-starter
 
-A ssr app starter built by Nuxt (3) + vue (3) + pinia + ofetch + element-plus + typescript!!!
+A ssr app starter built by Nuxt (3) + vue (3) + pinia + ofetch + element-plus + typescript + sass !!!
 
 ## Setup
 

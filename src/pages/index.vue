@@ -17,8 +17,12 @@ definePageMeta({
 })
 
 const siteStore = useSiteStore()
+const nuxtData = useNuxtData()
+const nuxtApp = useNuxtApp()
 
 onMounted(() => {
   siteStore.setToken('this is a demo token')
+  console.log('nuxt data', nuxtData)
+  console.log('nuxt app', nuxtApp)
 })
 </script>

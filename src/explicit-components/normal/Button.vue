@@ -1,7 +1,7 @@
 <template>
-  <button type="button">
+  <ElButton type="warning">
     <slot name="default">{{ text }}</slot>
-  </button>
+  </ElButton>
 </template>
 
 <script lang="ts">

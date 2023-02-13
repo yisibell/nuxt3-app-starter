@@ -6,10 +6,12 @@
 
     <span>{{ CounterStore.count }}: </span>
 
-    <button type="button" @click="CounterStore.increment">increment</button>
+    <ElButton type="primary" @click="CounterStore.increment"
+      >increment</ElButton
+    >
 
     <div>
-      <button type="button" @click="goHome">Go home</button>
+      <ElButton type="success" @click="goHome">Go home</ElButton>
     </div>
   </div>
 </template>

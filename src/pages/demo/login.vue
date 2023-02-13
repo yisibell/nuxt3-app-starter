@@ -3,22 +3,25 @@
     <h3>Login Page</h3>
 
     <div>
-      <label for="username">User name:</label>
-      <input id="username" v-model="form.username" type="text" />
-    </div>
+      <ElForm :model="form" label-width="100px">
+        <ElFormItem label="User name">
+          <ElInput v-model="form.username" type="text" />
+        </ElFormItem>
 
-    <div>
-      <label for="password">Password:</label>
-      <input id="password" v-model="form.password" type="password" />
-    </div>
+        <ElFormItem label="Password">
+          <ElInput v-model="form.password" type="password" />
+        </ElFormItem>
 
-    <div>
-      <button type="button" @click="handleLogin">Login</button>
+        <ElFormItem>
+          <ElButton type="primary" @click="handleLogin">Login</ElButton>
+        </ElFormItem>
+      </ElForm>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import { ElFormItem } from 'element-plus'
 import { useLogin } from '~/composables/api/modules/user'
 import { useSiteStore } from '~/store/site'
 
