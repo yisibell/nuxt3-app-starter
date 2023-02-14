@@ -2,7 +2,7 @@ import { useSiteStore } from '~/store/site'
 export interface IRequestResponse<T> {
   data: T
   message: string
-  status: number
+  code: number
 }
 
 const useRequest = <T>() => {
@@ -12,7 +12,7 @@ const useRequest = <T>() => {
   const apiFetch = $fetch.create<IRequestResponse<T>>({
     baseURL: appConfig.NUXT_APP_BASE_API,
     headers: {
-      token: siteStore.token,
+      Authorization: siteStore.token,
     },
     async onRequest({ request, options }) {
       // Log request

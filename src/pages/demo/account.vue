@@ -14,9 +14,9 @@ const { fetchUserInfo } = useUserInfo()
 const userInfo = ref<any>({})
 
 onMounted(async () => {
-  const { status, data } = await fetchUserInfo()
+  const { code, data } = await fetchUserInfo()
 
-  if (status === 200) {
+  if (code === 0) {
     userInfo.value = data
   }
 })

@@ -34,10 +34,10 @@ const form = ref({
 
 const { loginSubmit } = useLogin()
 const handleLogin = async () => {
-  const { status, data } = await loginSubmit(form.value)
+  const { code, data } = await loginSubmit(form.value)
 
-  if (status === 200) {
-    siteStore.setToken(data)
+  if (code === 0) {
+    siteStore.setToken(data.accessToken)
 
     navigateTo('/demo/account')
   }

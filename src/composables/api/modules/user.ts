@@ -2,10 +2,10 @@ import useRequest from '../request'
 import type { IUserLoginParams } from '~/composables/api/interfaces/user'
 
 export const useLogin = () => {
-  const { apiFetch } = useRequest<string>()
+  const { apiFetch } = useRequest<{ accessToken: string }>()
 
   const loginSubmit = async (body: IUserLoginParams) => {
-    return await apiFetch('/auth/login', {
+    return await apiFetch('/user/login', {
       method: 'POST',
       body,
     })
@@ -20,7 +20,7 @@ export const useUserInfo = () => {
   const { apiFetch } = useRequest()
 
   const fetchUserInfo = async () => {
-    return await apiFetch('/auth/me', {
+    return await apiFetch('/user/info', {
       method: 'GET',
     })
   }
