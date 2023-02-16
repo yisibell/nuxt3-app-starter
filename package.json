@@ -47,7 +47,8 @@
     "eslint-plugin-prettier": "^4.2.1",
     "execa": "^6.1.0",
     "minimist": "^1.2.7",
-    "nuxt": "^3.1.2",
+    "nuxt": "~3.2.0",
+    "nuxt-icons": "^3.1.0",
     "nuxt-proxy": "^0.4.1",
     "prettier": "^2.8.3",
     "sass": "^1.58.0"
