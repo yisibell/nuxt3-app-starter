@@ -1,8 +1,11 @@
 <template>
   <div>
-    <NuxtIcon name="vue-logo" font-size="36" color="red" />
-    <NuxtIcon name="vue-logo-filled" font-size="36" filled />
+    <VueLogoIcon font-size="36" fill="red" />
+    <VueLogoFilledIcon font-size="36" />
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import VueLogoIcon from '~/assets/icons/vue-logo.svg?component'
+import VueLogoFilledIcon from '~/assets/icons/vue-logo-filled.svg?component'
+</script>

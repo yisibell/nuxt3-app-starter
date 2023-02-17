@@ -27,7 +27,8 @@
     "prepare": "nuxt prepare",
     "cleanup": "nuxt cleanup",
     "start": "node ./.output/server/index.mjs",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "release": "changelogen --release && git push --follow-tags"
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.0.10",
@@ -40,6 +41,7 @@
     "@nuxt/eslint-config": "^0.1.1",
     "@pinia-plugin-persistedstate/nuxt": "^1.0.0",
     "@types/lodash": "^4.14.191",
+    "changelogen": "^0.4.1",
     "cross-env": "^7.0.3",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.33.0",
@@ -48,8 +50,8 @@
     "execa": "^6.1.0",
     "minimist": "^1.2.7",
     "nuxt": "~3.2.0",
-    "nuxt-icons": "^3.1.0",
     "nuxt-proxy": "^0.4.1",
+    "nuxt-svg-icons": "^1.2.0",
     "prettier": "^2.8.3",
     "sass": "^1.58.0"
   },
