@@ -4305,13 +4305,13 @@ nuxt-proxy@^0.4.1:
     http-proxy-middleware "^3.0.0-beta.0"
     ohash "^1.0.0"
 
-nuxt-svg-icons@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/nuxt-svg-icons/-/nuxt-svg-icons-1.2.0.tgz#f24402087fb0318bd99c9013c014a66a3c648d28"
-  integrity sha512-sVLzXldYEnWRYNhedoW1zyOPI+YwCUpWAortX5x6kXnVG+tX50Uz4ZI0YMtKY/vr6KQXIkbjuwFg7Z5924Cxlg==
+nuxt-svg-icons@^1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/nuxt-svg-icons/-/nuxt-svg-icons-1.6.0.tgz#912d1a07b5ac31a0092fbdc02143d389c3a0ae0b"
+  integrity sha512-1d7ZeKCpyjDCpQedLcjNtBrESPVERD1oVhRcFD3JudgzajbUojgPVe0hVbk7LyKhKbuU9ksxLNF4AxpaoOpnXg==
   dependencies:
     "@nuxt/kit" "^3.2.0"
-    vite-plugin-svg4vue "^2.1.5"
+    vite-plugin-svg4vue "^2.3.1"
 
 nuxt@~3.2.0:
   version "3.2.0"
@@ -5737,10 +5737,10 @@ vite-plugin-checker@^0.5.5:
     vscode-languageserver-textdocument "^1.0.1"
     vscode-uri "^3.0.2"
 
-vite-plugin-svg4vue@^2.1.5:
-  version "2.1.6"
-  resolved "https://registry.yarnpkg.com/vite-plugin-svg4vue/-/vite-plugin-svg4vue-2.1.6.tgz#01ff7f5f02127f2433604aaed4405cf4b204c17d"
-  integrity sha512-AwtokzC9WEadvmiVVPlaCGhhPCW8+vjiLwu6q5lgNYOuQRfbN2cG5r2j3r3wCfKUwfGy2gFNS2yprJklH3/0LQ==
+vite-plugin-svg4vue@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/vite-plugin-svg4vue/-/vite-plugin-svg4vue-2.3.1.tgz#77bb343311fcc3de636a6e38f04e71d34e5d672f"
+  integrity sha512-NxImgGMkxKqp+fsICyrltBsgQ+8Q5LI79U7XFuKdixFqhRE/CGaFWj5liLiYXg6zx03AWx85WNDJPUzAyO/cUA==
   dependencies:
     svgo "^3.0.2"
 
