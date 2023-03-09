@@ -1,4 +1,19 @@
 # CHANGE LOG
+## v1.2.0
+
+
+### 🚀 Enhancements
+
+  - **pm2:** Add pm2 support (922637c)
+
+### 🏡 Chore
+
+  - Update nuxt-svg-icons non-major dependencies (bd6923d)
+
+### ❤️  Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v1.1.0
 
 
