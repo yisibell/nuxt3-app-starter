@@ -1,4 +1,15 @@
 # CHANGE LOG
+## v1.3.1
+
+
+### 🩹 Fixes
+
+  - **pm2:** Use fork exec_mode because of the cluster exec_mode does not work (5cb6c29)
+
+### ❤️  Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v1.3.0
 
 
