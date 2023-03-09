@@ -24,9 +24,10 @@ $ yarn dev
 Build the application for production:
 
 ```bash
-$ yarn build:prod
+# build for production
+$ yarn build
 
-# or ft environment
+# build for ft
 $ yarn build:ft
 ```
 
@@ -39,7 +40,19 @@ $ yarn preview
 Start the node server:
 
 ``` bash
+# start for production
 $ yarn start
+# start for production with pm2
+$ yarn pm2:start
+# start for production with pm2 in docker
+$ yarn pm2:docker:start
+
+# start for ft
+$ yarn start:ft
+# start for ft with pm2
+$ yarn pm2:start-ft
+# start for ft with pm2 in docker
+$ yarn pm2:docker:start-ft
 ```
 
 
