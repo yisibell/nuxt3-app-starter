@@ -1,4 +1,15 @@
 # CHANGE LOG
+## v1.3.2
+
+
+### 🩹 Fixes
+
+  - **pm2:** Use cluster mode (a1ddb2a)
+
+### ❤️  Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v1.3.1
 
 
