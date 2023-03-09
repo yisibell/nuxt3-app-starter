@@ -1,4 +1,15 @@
 # CHANGE LOG
+## v1.3.0
+
+
+### 🚀 Enhancements
+
+  - **scripts:** Support define port and host (74f4a69)
+
+### ❤️  Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v1.2.0
 
 
