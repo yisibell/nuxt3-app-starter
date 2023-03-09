@@ -8,7 +8,7 @@ module.exports = {
       script: './.output/server/index.mjs',
       env: {
         HOST: '0.0.0.0',
-        PORT: 3000,
+        PORT: 3389,
         NUXT_APP_ENV: 'production',
       },
     },
