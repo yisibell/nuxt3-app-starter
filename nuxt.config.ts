@@ -13,11 +13,11 @@ export default defineNuxtConfig({
   srcDir: 'src/',
   appConfig: publicRuntimeConfig,
   modules: [
-    'nuxt-proxy',
+    // 'nuxt-proxy',
     '@pinia/nuxt',
     '@pinia-plugin-persistedstate/nuxt',
     '@element-plus/nuxt',
     'nuxt-svg-icons',
   ],
-  proxy: allConfig.proxy,
+  // proxy: allConfig.proxy,
 })
