@@ -1,4 +1,20 @@
 # CHANGE LOG
+## v1.4.0
+
+
+### 🚀 Enhancements
+
+  - **proxy:** Use nuxt-proxy-request module instead of nuxt-proxy (adc9e2b)
+
+### 🏡 Chore
+
+  - Try to use h3 proxyRequest handle server proxy (113bbf0)
+  - Use proxy in production env (f80099e)
+
+### ❤️  Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v1.3.2
 
 
