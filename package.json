@@ -55,7 +55,7 @@
     "execa": "^6.1.0",
     "minimist": "^1.2.7",
     "nuxt": "~3.2.0",
-    "nuxt-proxy": "^0.4.1",
+    "nuxt-proxy-request": "^1.1.0",
     "nuxt-svg-icons": "^1.9.0",
     "prettier": "^2.8.3",
     "sass": "^1.58.0"
