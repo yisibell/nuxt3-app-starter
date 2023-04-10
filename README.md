@@ -2,6 +2,17 @@
 
 A ssr app starter built by Nuxt (3) + vue (3) + pinia + ofetch + element-plus + typescript + sass !!!
 
+# Features
+
+- Support **http(s) proxy** in **development** and **server**.
+- Friendly SVG icon usage.
+- Support **PM2**.
+- Using **pinia** for state management.
+- Using **ofetch** for http request.
+- Using **element-plus** ui component libary.
+- Support **Typescript**.
+- Stying via **sass**.
+
 ## Setup
 
 Make sure to install the dependencies:

@@ -18,7 +18,6 @@ export default defineNuxtConfig({
     '@pinia-plugin-persistedstate/nuxt',
     '@element-plus/nuxt',
     'nuxt-svg-icons',
-    './packages/nuxt-module/module',
   ],
   proxy: allConfig.proxy,
 })
