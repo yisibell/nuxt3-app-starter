@@ -19,8 +19,8 @@ A ssr app starter built by Nuxt (3) + vue (3) + pinia + ofetch + element-plus + 
 Make sure to install the dependencies:
 
 ```bash
-# yarn
-yarn install
+# pnpm
+pnpm install
 ```
 
 ## Development Server
@@ -28,7 +28,7 @@ yarn install
 Start the development server on http://localhost:3389
 
 ```bash
-$ yarn dev
+$ pnpm dev
 ```
 
 ## Production
@@ -37,34 +37,34 @@ Build the application for production:
 
 ```bash
 # build for production
-$ yarn build
+$ pnpm build
 
 # build for ft
-$ yarn build:ft
+$ pnpm build:ft
 ```
 
 Locally preview production build:
 
 ```bash
-$ yarn preview
+$ pnpm preview
 ```
 
 Start the node server:
 
 ``` bash
 # start for production
-$ yarn start
+$ pnpm start
 # start for production with pm2
-$ yarn pm2:start
+$ pnpm pm2:start
 # start for production with pm2 in docker
-$ yarn pm2:docker:start
+$ pnpm pm2:docker:start
 
 # start for ft
-$ yarn start:ft
+$ pnpm start:ft
 # start for ft with pm2
-$ yarn pm2:start-ft
+$ pnpm pm2:start-ft
 # start for ft with pm2 in docker
-$ yarn pm2:docker:start-ft
+$ pnpm pm2:docker:start-ft
 ```
 
 
