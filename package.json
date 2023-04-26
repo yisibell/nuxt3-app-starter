@@ -38,15 +38,16 @@
   "dependencies": {
     "@element-plus/icons-vue": "^2.0.10",
     "@pinia/nuxt": "^0.4.6",
-    "element-plus": "^2.2.30",
+    "element-plus": "^2.3.4",
     "lodash": "^4.17.21"
   },
   "devDependencies": {
-    "@element-plus/nuxt": "^1.0.3",
+    "@element-plus/nuxt": "^1.0.4",
     "@nuxt/eslint-config": "^0.1.1",
     "@pinia-plugin-persistedstate/nuxt": "^1.0.0",
     "@types/lodash": "^4.14.191",
     "changelogen": "^0.4.1",
+    "consola": "^3.1.0",
     "cross-env": "^7.0.3",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.33.0",
@@ -54,9 +55,9 @@
     "eslint-plugin-prettier": "^4.2.1",
     "execa": "^6.1.0",
     "minimist": "^1.2.7",
-    "nuxt": "~3.2.0",
+    "nuxt": "~3.4.2",
     "nuxt-proxy-request": "^1.1.0",
-    "nuxt-svg-icons": "^1.9.0",
+    "nuxt-svg-icons": "^1.13.0",
     "prettier": "^2.8.3",
     "sass": "^1.58.0"
   },
