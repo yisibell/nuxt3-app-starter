@@ -1,4 +1,21 @@
 # CHANGE LOG
+## v1.5.0
+
+
+### 🚀 Enhancements
+
+  - Init dynamic-routes module (4204927)
+  - Update nuxt to 3.4 (f809eca)
+
+### 🏡 Chore
+
+  - Update readme (5860477)
+  - Update readme (3defc64)
+
+### ❤️  Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v1.4.0
 
 
