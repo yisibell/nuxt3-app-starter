@@ -1,0 +1,5 @@
+
+html {
+  // 解决 click 300ms 延迟1
+  touch-action: manipulation;
+}

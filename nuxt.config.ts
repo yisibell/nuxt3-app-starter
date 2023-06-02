@@ -20,10 +20,33 @@ export default defineNuxtConfig({
     'nuxt-svg-icons',
     '@invictus.codes/nuxt-vuetify',
   ],
+  css: ['~/assets/styles/index.scss'],
   proxy: allConfig.proxy,
   vuetify: {
     moduleOptions: {
       treeshaking: true,
+    },
+    vuetifyOptions: {
+      theme: {
+        defaultTheme: 'myCustomLightTheme',
+        themes: {
+          myCustomLightTheme: {
+            dark: false,
+            colors: {
+              /**
+               * 主题色
+               */
+              primary: '#0097C7',
+              secondary: '#52A28F',
+              error: '#ff5252',
+              /**
+               * 应用背景色
+               */
+              appbody: '#F3F5F8',
+            },
+          },
+        },
+      },
     },
   },
 })

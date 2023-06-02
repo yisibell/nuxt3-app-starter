@@ -1,5 +1,6 @@
 export default {
   NUXT_APP_ENV: 'development',
+  NUXT_APP_MOCK_API: '',
   // NUXT_APP_BASE_API: 'http://16.163.143.182',
 
   NUXT_APP_BASE_API: '/api2',
