@@ -38,11 +38,14 @@
   "dependencies": {
     "@element-plus/icons-vue": "^2.0.10",
     "@pinia/nuxt": "^0.4.6",
+    "axios": "^1.4.0",
     "element-plus": "^2.3.4",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "vuetify": "^3.3.2"
   },
   "devDependencies": {
     "@element-plus/nuxt": "^1.0.4",
+    "@invictus.codes/nuxt-vuetify": "^0.2.20",
     "@nuxt/eslint-config": "^0.1.1",
     "@pinia-plugin-persistedstate/nuxt": "^1.0.0",
     "@types/lodash": "^4.14.191",

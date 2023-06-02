@@ -1,5 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-
+import { defineNuxtConfig } from 'nuxt/config'
 import envConfig from './config'
 import { getPublicRuntimeConfig } from './config/util'
 
@@ -18,6 +18,12 @@ export default defineNuxtConfig({
     '@pinia-plugin-persistedstate/nuxt',
     '@element-plus/nuxt',
     'nuxt-svg-icons',
+    '@invictus.codes/nuxt-vuetify',
   ],
   proxy: allConfig.proxy,
+  vuetify: {
+    moduleOptions: {
+      treeshaking: true,
+    },
+  },
 })
