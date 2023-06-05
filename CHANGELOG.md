@@ -1,4 +1,21 @@
 # CHANGE LOG
+## v1.6.0
+
+[compare changes](https://undefined/undefined/compare/v1.5.0...v1.6.0)
+
+
+### 🚀 Enhancements
+
+  - Add vuetify3 support (8142204)
+
+### 🏡 Chore
+
+  - **docs:** Update readme (9c05410)
+
+### ❤️  Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v1.5.0
 
 
