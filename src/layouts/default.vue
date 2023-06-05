@@ -1,19 +1,13 @@
 <template>
-  <DefaultLayout>
-    <slot name="default" />
-  </DefaultLayout>
+  <div><slot name="default" /></div>
 </template>
 
 <script lang="ts">
 import { defineComponent, useHead } from '#imports'
-import DefaultLayout from '~~/packages/layouts/Default/index.vue'
 import useApp from '~~/packages/composables/helper/useApp'
 
 export default defineComponent({
   name: 'DefaultLayoutContainer',
-  components: {
-    DefaultLayout,
-  },
   setup() {
     const { settings } = useApp()
 

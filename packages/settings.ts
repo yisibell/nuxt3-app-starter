@@ -1,3 +1,3 @@
 export default {
-  appName: '面辅料采购网',
+  appName: 'Nuxt3 app starter',
 }
