@@ -1,4 +1,5 @@
 import { useSiteStore } from '~/store/site'
+
 export interface IRequestResponse<T> {
   data: T
   message: string

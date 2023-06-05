@@ -18,12 +18,6 @@ export default defineNuxtConfig({
     '@pinia-plugin-persistedstate/nuxt',
     '@element-plus/nuxt',
     'nuxt-svg-icons',
-    '@invictus.codes/nuxt-vuetify',
   ],
   proxy: allConfig.proxy,
-  vuetify: {
-    moduleOptions: {
-      treeshaking: true,
-    },
-  },
 })

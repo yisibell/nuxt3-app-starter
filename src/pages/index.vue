@@ -5,10 +5,6 @@
     <div><BaseButton text="button" /> <NormalButton text="need import" /></div>
 
     <div><NuxtLink to="/demo/counter">Go Counter demo</NuxtLink></div>
-
-    <div class="py-4">
-      <v-btn color="primary">test</v-btn>
-    </div>
   </div>
 </template>
 
