@@ -1,4 +1,17 @@
 # CHANGE LOG
+## v1.6.1
+
+[compare changes](https://undefined/undefined/compare/v1.6.0...v1.6.1)
+
+
+### 🩹 Fixes
+
+  - Config types (ef28884)
+
+### ❤️  Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v1.6.0
 
 [compare changes](https://undefined/undefined/compare/v1.5.0...v1.6.0)
