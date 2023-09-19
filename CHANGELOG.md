@@ -1,4 +1,16 @@
 # CHANGE LOG
+## v1.7.0
+
+[compare changes](https://github.com/yisibell/nuxt3-app-starter/compare/v1.6.1...v1.7.0)
+
+### 🚀 Enhancements
+
+- Upgrade all non-major deps and using `module` in pkg json file ([c489f45](https://github.com/yisibell/nuxt3-app-starter/commit/c489f45))
+
+### ❤️ Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v1.6.1
 
 [compare changes](https://undefined/undefined/compare/v1.6.0...v1.6.1)
