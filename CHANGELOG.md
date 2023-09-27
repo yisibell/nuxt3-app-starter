@@ -1,4 +1,8 @@
 # CHANGE LOG
+## v1.7.1
+
+[compare changes](https://github.com/yisibell/nuxt3-app-starter/compare/v1.7.0...v1.7.1)
+
 ## v1.7.0
 
 [compare changes](https://github.com/yisibell/nuxt3-app-starter/compare/v1.6.1...v1.7.0)
