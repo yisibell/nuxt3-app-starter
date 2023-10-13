@@ -44,7 +44,7 @@
   },
   "devDependencies": {
     "@element-plus/nuxt": "^1.0.6",
-    "@nuxt/eslint-config": "^0.1.1",
+    "@nuxt/eslint-config": "^0.2.0",
     "@pinia-plugin-persistedstate/nuxt": "^1.1.2",
     "@types/lodash": "^4.14.199",
     "changelogen": "^0.5.5",
@@ -58,7 +58,7 @@
     "minimist": "^1.2.8",
     "nuxt": "^3.7.4",
     "nuxt-proxy-request": "^1.7.0",
-    "nuxt-svg-icons": "^1.21.1",
+    "nuxt-svg-icons": "^1.23.1",
     "prettier": "^2.8.8",
     "sass": "^1.68.0"
   },
