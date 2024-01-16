@@ -1,4 +1,16 @@
 # CHANGE LOG
+## v1.9.0
+
+[compare changes](https://github.com/yisibell/nuxt3-app-starter/compare/v1.8.0...v1.9.0)
+
+### 🚀 Enhancements
+
+- Upgrade all dependencies to latest version ([8435459](https://github.com/yisibell/nuxt3-app-starter/commit/8435459))
+
+### ❤️ Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v1.8.0
 
 [compare changes](https://github.com/yisibell/nuxt3-app-starter/compare/v1.7.1...v1.8.0)
