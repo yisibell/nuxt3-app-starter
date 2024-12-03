@@ -1,31 +1,34 @@
 import useRequest from '../request'
-import type { IUserLoginParams } from '~/composables/api/interfaces/user'
+import type { IUserLoginParams, ILoginResData, IUserInfo, IUserAddressData } from '~/composables/api/interfaces/user'
 
-export const useLogin = () => {
-  const { apiFetch } = useRequest<{ accessToken: string }>()
+export const useUserApi = () => {
+  const { request } = useRequest()
 
-  const loginSubmit = async (body: IUserLoginParams) => {
-    return await apiFetch('/user/login', {
-      method: 'POST',
-      body,
-    })
-  }
+  /** 登录 */
+  const loginSubmit = (body: IUserLoginParams) => request<ILoginResData>('/user/login', {
+    method: 'POST',
+    body,
+  })
+
+  /** 登出 */
+  const logoutSubmit = () => request('/user/logout', {
+    method: 'GET',
+  })
+
+  /** 获取用户信息 */
+  const getUserInfo = () => request<IUserInfo>('/user/info', {
+    method: 'GET',
+  })
+
+  /** 获取用户地址 */
+  const getUserAddress = () => request<IUserAddressData>('/user/addresses', {
+    method: 'POST',
+  })
 
   return {
     loginSubmit,
-  }
-}
-
-export const useUserInfo = () => {
-  const { apiFetch } = useRequest()
-
-  const fetchUserInfo = async () => {
-    return await apiFetch('/user/info', {
-      method: 'GET',
-    })
-  }
-
-  return {
-    fetchUserInfo,
+    logoutSubmit,
+    getUserInfo,
+    getUserAddress,
   }
 }

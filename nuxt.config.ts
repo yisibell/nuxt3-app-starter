@@ -9,15 +9,28 @@ const allConfig = envConfig(NUXT_APP_ENV)
 const publicRuntimeConfig = getPublicRuntimeConfig(allConfig)
 
 export default defineNuxtConfig({
-  telemetry: false,
-  srcDir: 'src/',
-  appConfig: publicRuntimeConfig,
+
   modules: [
     'nuxt-proxy-request',
     '@pinia/nuxt',
     '@pinia-plugin-persistedstate/nuxt',
     '@element-plus/nuxt',
     'nuxt-svg-icons',
+    'vuetify-nuxt-module',
   ],
+  appConfig: publicRuntimeConfig,
+  srcDir: 'src/',
+  compatibilityDate: '2024-12-03',
+  telemetry: false,
+
   proxy: allConfig.proxy,
+
+  vuetify: {
+    moduleOptions: {
+      /* module specific options */
+    },
+    vuetifyOptions: {
+      /* vuetify options */
+    },
+  },
 })

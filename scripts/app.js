@@ -1,6 +1,6 @@
+import path from 'node:path'
 import minimist from 'minimist'
 import { execaCommand } from 'execa'
-import path from 'node:path'
 
 async function run() {
   try {
@@ -8,7 +8,7 @@ async function run() {
 
     const serverEntryPath = path.resolve(
       process.cwd(),
-      './.output/server/index.mjs'
+      './.output/server/index.mjs',
     )
 
     const { env = 'production', port = 3389, host = '0.0.0.0' } = argv
@@ -17,7 +17,8 @@ async function run() {
     await execaCommand(cmdStr, {
       stdio: 'inherit',
     })
-  } catch (err) {
+  }
+  catch (err) {
     console.error(err)
   }
 }

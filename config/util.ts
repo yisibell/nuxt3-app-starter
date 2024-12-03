@@ -1,23 +1,18 @@
-import { isPlainObject } from 'lodash'
+import { isPlainObject } from 'lodash-es'
 
-export interface IConfigObject {
-  [key: string]: any
-}
+export type IConfigObject = Record<string, any>
 
 /**
  * 获取可对外的公共配置数据
- * @param {object} obj 源对象数据
- * @param {string} privateKey 定义判断私有配置字段名称
- * @returns {object} 剔除了配置对象中含有 privateKey = true 的配置项
  */
 const getPublicRuntimeConfig = (obj: IConfigObject, privateKey = 'private') => {
   const keys = Object.keys(obj)
 
   return keys.reduce((res, key) => {
-    const val = obj[key]
+    const value = obj[key]
 
-    if (!isPlainObject(val) || val[privateKey] !== true) {
-      res[key] = val
+    if (!isPlainObject(value) || value[privateKey] !== true) {
+      res[key] = value
     }
 
     return res

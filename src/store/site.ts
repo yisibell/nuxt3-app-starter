@@ -22,5 +22,5 @@ export const useSiteStore = defineStore(
         secure: false,
       }),
     },
-  }
+  },
 )

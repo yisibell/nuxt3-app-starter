@@ -38,29 +38,29 @@
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",
-    "@pinia/nuxt": "^0.5.1",
-    "element-plus": "^2.5.1",
-    "lodash": "^4.17.21"
+    "@pinia/nuxt": "^0.8.0",
+    "element-plus": "^2.9.0",
+    "lodash-es": "^4.17.21"
   },
   "devDependencies": {
-    "@element-plus/nuxt": "^1.0.7",
-    "@nuxt/eslint-config": "^0.2.0",
-    "@pinia-plugin-persistedstate/nuxt": "^1.2.0",
-    "@types/lodash": "^4.14.202",
-    "changelogen": "^0.5.5",
+    "@element-plus/nuxt": "^1.1.0",
+    "@nuxt/eslint-config": "^0.7.2",
+    "@pinia-plugin-persistedstate/nuxt": "^1.2.1",
+    "changelogen": "^0.5.7",
     "consola": "^3.2.3",
     "cross-env": "^7.0.3",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^8.56.0",
+    "eslint": "^9.16.0",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-prettier": "^5.2.1",
     "execa": "^8.0.1",
     "minimist": "^1.2.8",
-    "nuxt": "^3.9.1",
-    "nuxt-proxy-request": "^1.9.0",
+    "nuxt": "^3.14.1592",
+    "nuxt-proxy-request": "^1.10.0",
     "nuxt-svg-icons": "^1.25.0",
-    "prettier": "^3.2.2",
-    "sass": "^1.69.7"
+    "prettier": "^3.4.1",
+    "sass": "^1.81.1",
+    "vuetify-nuxt-module": "^0.18.3"
   },
   "engines": {
     "node": ">=18.x"

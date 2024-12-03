@@ -1,7 +1,7 @@
+import type { ProxyOptions } from 'nuxt-proxy-request'
 import devConfig from './env/env.development'
 import ftConfig from './env/env.ft'
 import prodConfig from './env/env.production'
-import type { ProxyOptions } from 'nuxt-proxy-request'
 
 export interface IEnvConfig {
   NUXT_APP_ENV: string

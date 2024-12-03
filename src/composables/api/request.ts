@@ -6,11 +6,13 @@ export interface IRequestResponse<T> {
   code: number
 }
 
-const useRequest = <T>() => {
+export type IFetchMethodParams = Parameters<typeof $fetch>
+
+const useRequest = () => {
   const appConfig = useAppConfig()
   const siteStore = useSiteStore()
 
-  const apiFetch = $fetch.create<IRequestResponse<T>>({
+  const fetchInstance = $fetch.create({
     baseURL: appConfig.NUXT_APP_BASE_API,
     headers: {
       Authorization: siteStore.token,
@@ -25,8 +27,10 @@ const useRequest = <T>() => {
     },
   })
 
+  const request = <T>(url: IFetchMethodParams[0], opts?: IFetchMethodParams[1]) => fetchInstance<IRequestResponse<T>>(url, opts)
+
   return {
-    apiFetch,
+    request,
   }
 }
 

@@ -11,7 +11,8 @@ async function run() {
     await execaCommand(cmdStr, {
       stdio: 'inherit',
     })
-  } catch (err) {
+  }
+  catch (err) {
     console.error(err)
   }
 }
