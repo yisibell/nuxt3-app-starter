@@ -1,0 +1,62 @@
+// 自定义滚动条
+.scrollbar {
+  &--base {
+    &::-webkit-scrollbar {
+      width: 6px;
+      height: 4px;
+    }
+
+    &::-webkit-scrollbar-track-piece {
+      background-color: #fff;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #c2c2c2;
+      background-clip: padding-box;
+      min-height: 20px;
+    }
+  }
+
+  &--hide {
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+    &::-webkit-scrollbar {
+      width: 0 !important;
+    }
+  }
+
+  &--primary {
+    /* 定义滚动条样式 */
+    &::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+      background-color: rgba(240, 240, 240, 1);
+    }
+    /*定义滚动条轨道 内阴影+圆角*/
+    &::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 0px rgba(240, 240, 240, 0.3);
+      border-radius: 10px;
+      background-color: rgba(240, 240, 240, 0.3);
+    }
+    /*定义滑块 内阴影+圆角*/
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      box-shadow: inset 0 0 0px gray;
+      background-color: gray;
+    }
+  }
+}
+
+// 滚动行为
+.overscroll-behavior {
+  &--contain {
+    overscroll-behavior: contain;
+  }
+}
+
+// 禁止滚动
+.lu-overflow-y-hidden {
+  overflow: hidden !important;
+  overscroll-behavior: none;
+  height: 100vh;
+}

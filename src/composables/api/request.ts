@@ -1,9 +1,17 @@
 import { useSiteStore } from '~/store/site'
+import { $layer } from '~/utils/layer'
 
 export interface IRequestResponse<T> {
   data: T
   message: string
   code: number
+}
+
+export interface IRequestExtraOptions {
+  /**
+   * 是否开启 loading 提示
+   */
+  loading?: boolean
 }
 
 export type IFetchMethodParams = Parameters<typeof $fetch>
@@ -27,7 +35,17 @@ const useRequest = () => {
     },
   })
 
-  const request = <T>(url: IFetchMethodParams[0], opts?: IFetchMethodParams[1]) => fetchInstance<IRequestResponse<T>>(url, opts)
+  const request = <T>(url: IFetchMethodParams[0], opts?: IFetchMethodParams[1], extraOpts?: IRequestExtraOptions) => {
+    return new Promise((resolve, reject) => {
+      if (extraOpts?.loading) {
+        $layer.showLoading()
+      }
+
+      fetchInstance<IRequestResponse<T>>(url, opts).then(resolve).catch(reject).finally(() => {
+        $layer.closeLoading()
+      })
+    })
+  }
 
   return {
     request,

@@ -79,6 +79,7 @@
 
 <script setup lang="ts">
 import { useSiteStore } from '~/store/site'
+import { useNoticeStore } from '~/store/notice'
 import { useUserApi } from '~/composables/api/modules/user'
 
 definePageMeta({
@@ -103,6 +104,11 @@ const submitLoading = ref(false)
 const errorAlertVisible = ref(false)
 const errorAlertMessage = ref('')
 
+const receiptNoticeVisible = ref(false)
+// const willReceivedOrders = computed(() => NoticeStore.willReceivedOrders)
+
+const NoticeStore = useNoticeStore()
+
 const { loginSubmit } = useUserApi()
 
 const handleLogin = async () => {
@@ -115,7 +121,15 @@ const handleLogin = async () => {
         errorAlertVisible.value = false
 
         SiteStore.setToken(data.accessToken)
-        navigateTo('/')
+
+        const orders = await NoticeStore.fetchWillReceivedOrders()
+
+        if (orders.length) {
+          receiptNoticeVisible.value = true
+        }
+        else {
+          navigateTo('/')
+        }
       }
       else {
         errorAlertMessage.value = '用户名或密码不正确!'

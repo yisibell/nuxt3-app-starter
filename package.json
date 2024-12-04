@@ -41,6 +41,7 @@
     "@pinia/nuxt": "^0.8.0",
     "element-plus": "^2.9.0",
     "lodash-es": "^4.17.21",
+    "sweetalert2": "^11.14.5",
     "vuetify": "^3.7.5"
   },
   "devDependencies": {

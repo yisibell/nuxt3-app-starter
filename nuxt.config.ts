@@ -20,6 +20,7 @@ export default defineNuxtConfig({
   devtools: {
     enabled: false,
   },
+  css: ['~/assets/styles/index.scss'],
   appConfig: publicRuntimeConfig,
   srcDir: 'src/',
   compatibilityDate: '2024-12-03',
