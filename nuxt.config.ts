@@ -9,7 +9,6 @@ const allConfig = envConfig(NUXT_APP_ENV)
 const publicRuntimeConfig = getPublicRuntimeConfig(allConfig)
 
 export default defineNuxtConfig({
-
   modules: [
     'nuxt-proxy-request',
     '@pinia/nuxt',
@@ -18,6 +17,9 @@ export default defineNuxtConfig({
     'nuxt-svg-icons',
     'vuetify-nuxt-module',
   ],
+  devtools: {
+    enabled: false,
+  },
   appConfig: publicRuntimeConfig,
   srcDir: 'src/',
   compatibilityDate: '2024-12-03',
@@ -31,6 +33,19 @@ export default defineNuxtConfig({
     },
     vuetifyOptions: {
       /* vuetify options */
+      theme: {
+        defaultTheme: 'light',
+        themes: {
+          light: {
+            dark: false,
+            colors: {
+              primary: '#0097C7',
+              secondary: '#52A28F',
+              appbody: '#F3F5F8',
+            },
+          },
+        },
+      },
     },
   },
 })
