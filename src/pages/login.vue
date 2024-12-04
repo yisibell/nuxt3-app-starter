@@ -109,13 +109,13 @@ const receiptNoticeVisible = ref(false)
 
 const NoticeStore = useNoticeStore()
 
-const { loginSubmit } = useUserApi()
+const UserApi = useUserApi()
 
 const handleLogin = async () => {
   if (valid.value) {
     try {
       submitLoading.value = true
-      const { code, data } = await loginSubmit(form.value)
+      const { code, data } = await UserApi.login(form.value)
       if (code === 0) {
         errorAlertMessage.value = ''
         errorAlertVisible.value = false

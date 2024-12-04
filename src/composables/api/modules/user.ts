@@ -5,18 +5,18 @@ export const useUserApi = () => {
   const { request } = useRequest()
 
   /** 登录 */
-  const loginSubmit = (body: IUserLoginParams) => request<ILoginResData>('/user/login', {
+  const login = (body: IUserLoginParams) => request<ILoginResData>('/user/login', {
     method: 'POST',
     body,
   })
 
   /** 登出 */
-  const logoutSubmit = () => request('/user/logout', {
+  const logout = () => request('/user/logout', {
     method: 'GET',
   })
 
   /** 获取用户信息 */
-  const getUserInfo = () => request<IUserInfo>('/user/info', {
+  const info = () => request<IUserInfo>('/user/info', {
     method: 'GET',
   })
 
@@ -26,9 +26,9 @@ export const useUserApi = () => {
   })
 
   return {
-    loginSubmit,
-    logoutSubmit,
-    getUserInfo,
+    login,
+    logout,
+    info,
     getUserAddress,
   }
 }

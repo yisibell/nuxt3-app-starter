@@ -36,7 +36,7 @@ const useRequest = () => {
   })
 
   const request = <T>(url: IFetchMethodParams[0], opts?: IFetchMethodParams[1], extraOpts?: IRequestExtraOptions) => {
-    return new Promise((resolve, reject) => {
+    return new Promise<IRequestResponse<T>>((resolve, reject) => {
       if (extraOpts?.loading) {
         $layer.showLoading()
       }
