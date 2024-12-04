@@ -5,7 +5,7 @@ import { getPublicRuntimeConfig } from './config/util'
 
 const { NUXT_APP_ENV } = process.env
 
-const allConfig = envConfig(NUXT_APP_ENV)
+const allConfig = await envConfig(NUXT_APP_ENV)
 const publicRuntimeConfig = getPublicRuntimeConfig(allConfig)
 
 export default defineNuxtConfig({

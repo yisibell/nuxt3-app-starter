@@ -1,7 +1,5 @@
 import type { ProxyOptions } from 'nuxt-proxy-request'
 import devConfig from './env/env.development'
-import ftConfig from './env/env.ft'
-import prodConfig from './env/env.production'
 
 export interface IEnvConfig {
   NUXT_APP_ENV: string
@@ -11,15 +9,16 @@ export interface IEnvConfig {
   }
 }
 
-export default function (env?: string): IEnvConfig {
-  switch (env) {
-    case 'development':
-      return devConfig
-    case 'ft':
-      return ftConfig
-    case 'production':
-      return prodConfig
-    default:
-      return devConfig
+export default async function (env?: string): Promise<IEnvConfig> {
+  if (env === 'development') {
+    return (await import('./env/env.development')).default
   }
+  else if (env === 'ft') {
+    return (await import('./env/env.ft')).default
+  }
+  else if (env === 'production') {
+    return (await import('./env/env.production')).default
+  }
+
+  return devConfig
 }
