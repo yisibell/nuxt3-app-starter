@@ -74,6 +74,12 @@
         </v-card-text>
       </v-card>
     </div>
+
+    <ReceiptNotice
+      v-model="receiptNoticeVisible"
+      :order-sns="willReceivedOrders"
+      @close="handleReceiptNoticeClose"
+    />
   </div>
 </template>
 
@@ -81,6 +87,7 @@
 import { useSiteStore } from '~/store/site'
 import { useNoticeStore } from '~/store/notice'
 import { useUserApi } from '~/composables/api/modules/user'
+import ReceiptNotice from '~/explicit-components/views/login/ReceiptNotice.vue'
 
 definePageMeta({
   layout: 'custom',
@@ -104,8 +111,8 @@ const submitLoading = ref(false)
 const errorAlertVisible = ref(false)
 const errorAlertMessage = ref('')
 
-const receiptNoticeVisible = ref(false)
-// const willReceivedOrders = computed(() => NoticeStore.willReceivedOrders)
+const receiptNoticeVisible = ref(true)
+const willReceivedOrders = computed(() => NoticeStore.willReceivedOrders)
 
 const NoticeStore = useNoticeStore()
 
@@ -140,6 +147,10 @@ const handleLogin = async () => {
       submitLoading.value = false
     }
   }
+}
+
+const handleReceiptNoticeClose = () => {
+  navigateTo('/')
 }
 </script>
 

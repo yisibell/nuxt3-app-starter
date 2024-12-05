@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <main>
+  <v-app>
+    <v-main>
       <slot name="default" />
-    </main>
-  </div>
+    </v-main>
+  </v-app>
 </template>

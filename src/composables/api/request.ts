@@ -1,9 +1,9 @@
 import { useSiteStore } from '~/store/site'
 import { $layer } from '~/utils/layer'
 
-export interface IRequestResponse<T> {
+export interface IRequestResponse<T = unknown> {
   data: T
-  message: string
+  msg: string
   code: number
 }
 
@@ -25,13 +25,36 @@ const useRequest = () => {
     headers: {
       Authorization: siteStore.token,
     },
-    async onRequest({ request, options }) {
-      // Log request
-      console.log('[fetch request]', request, options)
+    onResponse({ response }) {
+      const body = response._data as IRequestResponse<{ location?: string }>
+      const { code, data } = body
+
+      if (![200, 201, 0].includes(code)) {
+        // 重定向处理
+        if ([301, 302].includes(code)) {
+          if (data?.location) {
+            navigateTo(data.location)
+          }
+        }
+        else {
+          console.error('[Response Error Data]:', response)
+        }
+      }
     },
-    async onResponse({ request, response }) {
-      // Log response
-      console.log('[fetch response]', request, response.status, response.body)
+    onResponseError({ response }) {
+      // Log error
+      console.error(
+        '[fetch response error]',
+        request,
+        response.status,
+        response.body,
+      )
+
+      const code = response.status
+
+      if ([401].includes(code)) {
+        navigateTo('/login')
+      }
     },
   })
 
