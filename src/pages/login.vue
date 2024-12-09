@@ -47,6 +47,7 @@
               label="用户账号"
               clearable
               class="mb-2"
+              color="primary"
             />
 
             <v-text-field
@@ -59,6 +60,7 @@
               clearable
               variant="outlined"
               class="mb-4"
+              color="primary"
             />
 
             <v-btn
@@ -111,7 +113,7 @@ const submitLoading = ref(false)
 const errorAlertVisible = ref(false)
 const errorAlertMessage = ref('')
 
-const receiptNoticeVisible = ref(true)
+const receiptNoticeVisible = ref(false)
 const willReceivedOrders = computed(() => NoticeStore.willReceivedOrders)
 
 const NoticeStore = useNoticeStore()
@@ -127,7 +129,7 @@ const handleLogin = async () => {
         errorAlertMessage.value = ''
         errorAlertVisible.value = false
 
-        SiteStore.setToken(data.accessToken)
+        SiteStore.SET_TOKEN(data.accessToken)
 
         const orders = await NoticeStore.fetchWillReceivedOrders()
 

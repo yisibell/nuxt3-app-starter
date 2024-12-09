@@ -18,7 +18,6 @@ export const useCartApi = () => {
   /** 加购 */
   const add = (body: IBatchAddCartParams) => {
     return request('/cart/add', {
-
       method: 'post',
       body,
     })

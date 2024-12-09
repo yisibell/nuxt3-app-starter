@@ -2,7 +2,7 @@
   <v-dialog
     v-model="dialogVisible"
     persistent
-    max-width="420"
+    max-width="520"
   >
     <v-card>
       <v-toolbar

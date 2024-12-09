@@ -18,12 +18,13 @@ export type IFetchMethodParams = Parameters<typeof $fetch>
 
 const useRequest = () => {
   const appConfig = useAppConfig()
-  const siteStore = useSiteStore()
+  const SiteStore = useSiteStore()
 
   const fetchInstance = $fetch.create({
     baseURL: appConfig.NUXT_APP_BASE_API,
-    headers: {
-      Authorization: siteStore.token,
+    timeout: 30000,
+    onRequest({ options }) {
+      options.headers.set('Authorization', SiteStore.accessToken)
     },
     onResponse({ response }) {
       const body = response._data as IRequestResponse<{ location?: string }>

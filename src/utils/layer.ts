@@ -14,6 +14,7 @@ export class Layer {
       cancelButtonText: '取消',
       width: '26rem',
       reverseButtons: true,
+      scrollbarPadding: false,
     })
 
     this.loadingInstance = swal.mixin({
@@ -55,15 +56,14 @@ export class Layer {
   }
 
   toast(title: string, opts?: SweetAlertOptions) {
-    return this.swalInstance.fire({
+    return this.swalInstance.fire(Object.assign({
       icon: 'success',
       position: 'center',
       title,
       showConfirmButton: false,
-      timer: 2500,
+      timer: 3500,
       toast: true,
-      ...(opts || {}),
-    })
+    }, opts))
   }
 
   showLoading() {

@@ -41,7 +41,9 @@
     "@pinia/nuxt": "^0.8.0",
     "element-plus": "^2.9.0",
     "lodash-es": "^4.17.21",
+    "number-precision": "^1.6.0",
     "sweetalert2": "^11.14.5",
+    "swiper": "^11.1.15",
     "vuetify": "^3.7.5"
   },
   "devDependencies": {
