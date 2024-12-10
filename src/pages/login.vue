@@ -93,6 +93,13 @@ import ReceiptNotice from '~/explicit-components/views/login/ReceiptNotice.vue'
 
 definePageMeta({
   layout: 'custom',
+  title: '登录',
+})
+
+const route = useRoute()
+
+useHead({
+  title: route.meta.title as string,
 })
 
 const valid = ref(false)

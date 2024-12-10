@@ -17,6 +17,16 @@ interface ICartMainRef {
   autoCheckedAll: () => void
 }
 
+definePageMeta({
+  title: '我的购物车',
+})
+
+const route = useRoute()
+
+useHead({
+  title: route.meta.title as string,
+})
+
 const CartStore = useCartStore()
 
 const isCartEmpty = computed(() => CartStore.items.length <= 0)

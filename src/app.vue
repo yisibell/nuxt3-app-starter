@@ -3,10 +3,11 @@
 </template>
 
 <script setup lang="ts">
-const appConfig = useAppConfig()
+import { settings } from '~/settings'
 
-onMounted(() => {
-  console.log('nuxt app entrypoint!!!')
-  console.log('app config:', appConfig)
+useHead({
+  titleTemplate: (titleChunk) => {
+    return titleChunk ? `${titleChunk} - ${settings.appName}` : settings.appName
+  },
 })
 </script>

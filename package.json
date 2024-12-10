@@ -38,7 +38,7 @@
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",
-    "@pinia/nuxt": "^0.8.0",
+    "@pinia/nuxt": "^0.9.0",
     "element-plus": "^2.9.0",
     "lodash-es": "^4.17.21",
     "number-precision": "^1.6.0",
@@ -62,11 +62,11 @@
     "nuxt": "^3.14.1592",
     "nuxt-proxy-request": "^1.10.0",
     "nuxt-svg-icons": "^1.25.0",
-    "prettier": "^3.4.1",
-    "sass": "^1.81.1",
+    "prettier": "^3.4.2",
+    "sass": "^1.82.0",
     "vuetify-nuxt-module": "^0.18.3"
   },
   "engines": {
-    "node": ">=18.x"
+    "node": ">=20"
   }
 }

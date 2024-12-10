@@ -23,7 +23,7 @@ export const useOrderApi = () => {
   const changeStatus = (body: IOrderStatusChangeParams) => request('/order/status', { method: 'POST', body })
 
   /** 订单列表 */
-  const list = (body: IGetOrderListParams) => request<{ list: IOrderListInfo[], total: number }>('', { method: 'POST', body })
+  const list = (body: IGetOrderListParams) => request<{ list: IOrderListInfo[], total: number }>('/order/list', { method: 'POST', body })
 
   return {
     commit,

@@ -51,6 +51,16 @@
 <script setup lang="ts">
 import { useAccountStore } from '~/store/account'
 
+definePageMeta({
+  title: '账户信息',
+})
+
+const route = useRoute()
+
+useHead({
+  title: route.meta.title as string,
+})
+
 const AccountStore = useAccountStore()
 
 const userInfo = computed(() => AccountStore.info)
