@@ -1,12 +1,12 @@
 <template>
-  <ReturnList />
+  <OrderList />
 </template>
 
 <script lang="ts" setup>
-import ReturnList from '~/explicit-components/views/order/ReturnList/index.vue'
+import OrderList from '~/explicit-components/views/order/List/index.vue'
 
 definePageMeta({
-  title: '退货列表',
+  title: '我的订单',
 })
 
 const route = useRoute()

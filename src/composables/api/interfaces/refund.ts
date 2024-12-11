@@ -62,6 +62,10 @@ export interface IRefundDetailItem {
     applyQty: number
     status: string
   }>
+  img?: string
+  imgUrl?: string
+  shipTime: number
+  code?: string
 }
 
 export interface IReturnListItemInfo {

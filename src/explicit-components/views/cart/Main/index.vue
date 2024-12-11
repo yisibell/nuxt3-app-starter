@@ -50,7 +50,6 @@
             v-model="checkedItemIds"
             :value="row.id"
             color="primary"
-            density="compact"
             hide-details
             multiple
             @update:model-value="handleRowCheckboxChange"

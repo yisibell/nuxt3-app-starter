@@ -36,6 +36,7 @@
                 :key="v.value"
                 :value="v.value"
                 :label="v.label"
+                :title="v.value"
               />
             </el-select>
           </div>
@@ -242,7 +243,6 @@ import useOrder, {
   ORDER_RECEIPTED,
 } from '~/composables/logic/useOrder'
 import type { IOrderListInfo } from '~/composables/api/interfaces/order'
-// import BaseCategoryPicker from '~~/packages/components/BaseCategoryPicker/index.vue'
 import { useOrderApi } from '~/composables/api/modules/order'
 
 const router = useRouter()

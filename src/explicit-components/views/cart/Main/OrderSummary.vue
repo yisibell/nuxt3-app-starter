@@ -9,7 +9,6 @@
           v-model="checked"
           :indeterminate="isIndeterminate"
           color="primary"
-          density="compact"
           hide-details
           label="全选"
           @update:model-value="handleChange"

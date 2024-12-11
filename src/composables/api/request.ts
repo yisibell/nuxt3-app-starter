@@ -42,7 +42,7 @@ const useRequest = () => {
         }
       }
     },
-    onResponseError({ response }) {
+    onResponseError({ request, response }) {
       // Log error
       console.error(
         '[fetch response error]',
@@ -66,7 +66,9 @@ const useRequest = () => {
       }
 
       fetchInstance<IRequestResponse<T>>(url, opts).then(resolve).catch(reject).finally(() => {
-        $layer.closeLoading()
+        if (extraOpts?.loading) {
+          $layer.closeLoading()
+        }
       })
     })
   }

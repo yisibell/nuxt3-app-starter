@@ -20,7 +20,7 @@ export default defineNuxtConfig({
   devtools: {
     enabled: false,
   },
-  css: ['~/assets/styles/index.scss'],
+  css: ['~/assets/styles/index.scss', '@mdi/font/css/materialdesignicons.css'],
   appConfig: publicRuntimeConfig,
   srcDir: 'src/',
   compatibilityDate: '2024-12-03',
@@ -42,11 +42,13 @@ export default defineNuxtConfig({
             colors: {
               primary: '#0097C7',
               secondary: '#52A28F',
+              error: '#ff5252',
               appbody: '#F3F5F8',
             },
           },
         },
       },
+
     },
   },
 })

@@ -6,7 +6,7 @@
         :md="2"
       >
         <div class="d-flex align-center">
-          <div style="min-width: 32px">
+          <div style="min-width: 38px">
             <slot
               name="selection"
               :row="data"

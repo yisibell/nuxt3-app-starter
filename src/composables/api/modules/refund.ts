@@ -3,6 +3,7 @@ import type {
   IRefundApplyParams,
   IGetRefundListParams,
   IReturnListItemInfo,
+  IRefundApplyListItemInfo,
 } from '~/composables/api/interfaces/refund'
 
 export const useRefundApi = () => {
@@ -12,10 +13,9 @@ export const useRefundApi = () => {
   const applyList = (body: {
     orderId: number
   }, loading?: boolean) => {
-    return request(
+    return request<{ list: IRefundApplyListItemInfo[] }>(
       '/refund/applyItems',
       {
-
         method: 'post',
         body,
       },

@@ -117,7 +117,7 @@ const items: IListItem[] = [
   },
   {
     title: '我的购物车',
-    icon: 'mdi-cart',
+    icon: 'mdi-shopping',
     href: '/cart',
     value: 'cart',
   },

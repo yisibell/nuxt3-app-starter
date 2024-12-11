@@ -24,7 +24,6 @@ const props = withDefaults(defineProps<{
   step: 1,
   min: 0,
   max: 99999,
-  size: 'small',
 })
 
 const emit = defineEmits(['change'])
@@ -69,7 +68,7 @@ const formatValue = (str: string | number) => {
 }
 
 const handleInput = (value?: number) => {
-  inputNumber.value = formatValue(value || '')
+  inputNumber.value = formatValue(value || 0)
 
   forceUpdateInputNumberKey()
 }

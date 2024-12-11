@@ -12,7 +12,7 @@
 
 <script setup lang="ts">
 withDefaults(defineProps<{
-  items: string[]
+  items?: string[] | null
 }>(), {
   items: () => [],
 })

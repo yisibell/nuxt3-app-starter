@@ -24,10 +24,10 @@ export interface IUserAddressData {
   code: string
   addresses: {
     id: number
-    isDefault: 0 | 1
     contact: string
     phone: string
     address: string
-    status: number
+    status?: number
+    isDefault?: 0 | 1
   }[]
 }

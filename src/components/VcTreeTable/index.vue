@@ -2,6 +2,7 @@
   <el-table
     v-bind="props"
     class="lu-tree-table"
+    @selection-change="handleSelectionChange"
   >
     <slot name="left" />
 
@@ -42,4 +43,10 @@ const props = withDefaults(defineProps<{
   rowKey: 'id',
   data: () => [],
 })
+
+const emit = defineEmits(['selection-change'])
+
+const handleSelectionChange = (value: any[]) => {
+  emit('selection-change', value)
+}
 </script>

@@ -3,7 +3,7 @@
   "version": "1.9.0",
   "description": "A Nuxt(3) app starter!",
   "author": {
-    "name": "elenh",
+    "name": "yisibell",
     "email": "yisiwings@163.com"
   },
   "type": "module",
@@ -39,6 +39,8 @@
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",
     "@pinia/nuxt": "^0.9.0",
+    "countdownbar": "^1.6.0",
+    "dayjs": "^1.11.13",
     "element-plus": "^2.9.0",
     "lodash-es": "^4.17.21",
     "number-precision": "^1.6.0",
@@ -48,6 +50,7 @@
   },
   "devDependencies": {
     "@element-plus/nuxt": "^1.1.0",
+    "@mdi/font": "^7.4.47",
     "@nuxt/eslint-config": "^0.7.2",
     "@pinia-plugin-persistedstate/nuxt": "^1.2.1",
     "changelogen": "^0.5.7",

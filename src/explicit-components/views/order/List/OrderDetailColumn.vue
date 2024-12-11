@@ -6,10 +6,10 @@
     >
       <span>{{ v.number }}</span>
       <span>{{ v.color }}-{{ v.colorEn }}</span>
-      <span>({{ `${v.quantity}${v.unit}` }})</span>
+      <span class="mr-2">({{ `${v.quantity}${v.unit}` }})</span>
       <span
         v-if="v.remark"
-        class="text-red"
+        class="text-red "
       >{{ v.remark }}</span>
     </div>
   </div>
