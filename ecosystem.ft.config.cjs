@@ -2,7 +2,7 @@
 module.exports = {
   apps: [
     {
-      name: 'Nuxt3AppStarter',
+      name: 'NuxtAppStarterMatPur',
       exec_mode: 'cluster', // fork, cluster
       instances: 'max', // Or a number of instances
       script: './.output/server/index.mjs',
