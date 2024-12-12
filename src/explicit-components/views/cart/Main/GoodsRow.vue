@@ -1,20 +1,23 @@
 <template>
   <div class="goods-row mb-5 text-grey-darken-2">
-    <v-row class="mb-2">
+    <v-row
+      class="mb-2"
+    >
       <v-col
         :cols="12"
         :md="2"
       >
         <div class="d-flex align-center">
-          <div style="min-width: 58px">
+          <div class="goods-row__selection">
             <slot
               name="selection"
               :row="data"
             />
           </div>
           <v-img
-            :width="140"
             :src="data.img.src"
+            cover
+            class="goods-row__goods-img"
           />
         </div>
       </v-col>
@@ -29,7 +32,10 @@
               @click="handleToDetail"
             >{{ data.code }}</span>
           </div>
-          <v-row>
+          <v-row
+            class="fill-width"
+            dense
+          >
             <v-col
               :md="3"
               class="text-caption goods-row__goods-style"
@@ -321,6 +327,14 @@ const strictStepQuantity = computed(() => {
 
 <style lang="scss" scoped>
 .goods-row {
+  &__selection {
+    min-width: 50px;
+  }
+
+  &__goods-img {
+    flex: 1;
+  }
+
   &__code {
     font-weight: bold;
     cursor: pointer;
@@ -333,6 +347,7 @@ const strictStepQuantity = computed(() => {
 
   &__goods-style {
     line-height: 20px;
+    margin-bottom: 16px;
   }
 
   &__quantity {

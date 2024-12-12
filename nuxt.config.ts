@@ -24,10 +24,20 @@ export default defineNuxtConfig({
   appConfig: publicRuntimeConfig,
   srcDir: 'src/',
   compatibilityDate: '2024-12-03',
+
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: 'modern',
+        },
+      },
+    },
+  },
   telemetry: false,
 
   elementPlus: {
-    defaultLocale: 'zh-CN',
+    defaultLocale: 'zh-cn',
   },
 
   proxy: allConfig.proxy,

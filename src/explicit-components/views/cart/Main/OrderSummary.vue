@@ -11,7 +11,7 @@
             :indeterminate="isIndeterminate"
             color="primary"
             hide-details
-            label="全选"
+            :label="checked ? '取消全选' : '全选'"
             @update:model-value="handleChange"
           />
         </div>
@@ -63,12 +63,15 @@
             </div>
           </template>
 
-          <div
+          <v-alert
             v-show="hasIndefiniteGoods"
-            class="text-error text-caption"
-          >
-            合计金额未包含面料类商品，面料品类商品预定后按实际米数结算
-          </div>
+            icon="$warning"
+            color="#C51162"
+            variant="tonal"
+            density="compact"
+            text="合计金额未包含面料类商品，面料品类商品预定后按实际米数结算"
+            class="text-caption"
+          />
         </div>
 
         <v-btn
