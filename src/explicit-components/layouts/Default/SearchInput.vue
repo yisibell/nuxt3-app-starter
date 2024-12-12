@@ -65,29 +65,36 @@
 
     <v-card
       v-show="showMenu"
-      class="pl-2"
+      elevation="8"
     >
-      <v-virtual-scroll
-        :items="goodsNumberComboboxItems"
-        height="480"
-        item-height="40"
-        class="scrollbar--primary"
-      >
-        <template #default="{ item }">
-          <v-list-item
-            :key="item.value"
-            density="compact"
-            class="cursor-pointer"
-            @click="handleFuzzyMatch(item.value)"
-          >
-            <v-list-item-title class="text-caption">
-              {{ item.text }}
-            </v-list-item-title>
-          </v-list-item>
+      <v-card-subtitle class="px-4 py-3">
+        猜你想搜
+      </v-card-subtitle>
 
-          <v-divider />
-        </template>
-      </v-virtual-scroll>
+      <v-divider />
+
+      <v-card-text class="pr-0">
+        <v-virtual-scroll
+          :items="goodsNumberComboboxItems"
+          max-height="480"
+          class="scrollbar--primary"
+        >
+          <template #default="{ item }">
+            <v-list-item
+              :key="item.value"
+              color="primary"
+              rounded="xl"
+              class="mr-4"
+              prepend-icon="mdi-magnify"
+              @click="handleFuzzyMatch(item.value)"
+            >
+              <v-list-item-subtitle>
+                {{ item.text }}
+              </v-list-item-subtitle>
+            </v-list-item>
+          </template>
+        </v-virtual-scroll>
+      </v-card-text>
     </v-card>
   </v-menu>
 </template>

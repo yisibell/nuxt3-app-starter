@@ -73,7 +73,7 @@ withDefaults(defineProps<{
 })
 
 const columns = [
-  { align: 'center', label: '商品信息', prop: 'code' },
+  { align: 'left', label: '商品信息', prop: 'code', headerAlign: 'center' },
   { align: 'center', label: '单价', prop: 'price' },
   { align: 'center', label: '数量', prop: 'quantity', width: 110 },
   { align: 'center', label: '小计', prop: 'totalPrice', width: 110 },

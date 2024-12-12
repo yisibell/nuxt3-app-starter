@@ -14,7 +14,7 @@
       <v-card
         min-width="500"
         rounded
-        elevation="16"
+        elevation="12"
         class="pa-6"
       >
         <v-card-title class="d-flex justify-center">

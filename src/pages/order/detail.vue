@@ -14,7 +14,16 @@ import OrderDetail from '~/explicit-components/views/order/Detail/index.vue'
 import type { IOrderDetailInfo } from '~/composables/api/interfaces/order'
 import { useOrderApi } from '~/composables/api/modules/order'
 
+definePageMeta({
+  title: '订单详情',
+})
+
 const route = useRoute()
+
+useHead({
+  title: route.meta.title as string,
+})
+
 const router = useRouter()
 const query = computed(() => route.query)
 const orderSn = computed(() => query.value.orderSn as string)

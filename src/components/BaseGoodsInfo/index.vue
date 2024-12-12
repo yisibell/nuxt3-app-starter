@@ -1,5 +1,5 @@
 <template>
-  <div class="pa-2 d-flex justify-center align-center flex-wrap">
+  <div class="pa-2 d-flex align-center flex-wrap">
     <div class="mr-3">
       <v-img
         :src="imgSrc"

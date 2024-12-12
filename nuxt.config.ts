@@ -26,6 +26,10 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-12-03',
   telemetry: false,
 
+  elementPlus: {
+    defaultLocale: 'zh-CN',
+  },
+
   proxy: allConfig.proxy,
 
   vuetify: {

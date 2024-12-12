@@ -79,7 +79,7 @@
               </v-col>
               <v-col
                 :md="6"
-                class="text-red"
+                class="text-error"
               >
                 <div class="px-2">
                   <span
@@ -101,11 +101,11 @@
       <v-card-text>
         <div class="float-right text-right">
           <div class="text-body-2 mb-2">
-            共<span class="text-red mx-2"> {{ totalNumber }} </span>件商品
+            共<span class="text-error mx-2"> {{ totalNumber }} </span>件商品
           </div>
           <div class="mb-2">
             <span>合计:</span>
-            <span class="text-red font-weight-bold">￥{{ totalPrice }}</span>
+            <span class="text-error font-weight-bold">￥{{ totalPrice }}</span>
           </div>
         </div>
 

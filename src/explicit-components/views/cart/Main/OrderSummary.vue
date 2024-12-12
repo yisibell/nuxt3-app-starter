@@ -5,14 +5,16 @@
   >
     <v-card-text class="px-0 py-4 d-flex justify-space-between">
       <div class="d-flex align-center">
-        <v-checkbox
-          v-model="checked"
-          :indeterminate="isIndeterminate"
-          color="primary"
-          hide-details
-          label="全选"
-          @update:model-value="handleChange"
-        />
+        <div class="mr-4">
+          <v-checkbox
+            v-model="checked"
+            :indeterminate="isIndeterminate"
+            color="primary"
+            hide-details
+            label="全选"
+            @update:model-value="handleChange"
+          />
+        </div>
         <v-btn
           color="red"
           size="small"
@@ -29,11 +31,11 @@
           <div class="d-flex align-center justify-end">
             <span>
               共
-              <span class="text-red">{{ totalGoodsNumber }}</span> 件商品，
+              <span class="text-error">{{ totalGoodsNumber }}</span> 件商品，
             </span>
             <span>
               已选择
-              <span class="text-red">{{ checkedTotalGoodsNumber }}</span> 件
+              <span class="text-error">{{ checkedTotalGoodsNumber }}</span> 件
             </span>
 
             <v-divider
@@ -43,19 +45,19 @@
             />
 
             <span>合计金额:</span>
-            <span class="text-h6 font-weight-bold ml-3 text-red">
+            <span class="text-h6 font-weight-bold ml-3 text-error">
               ￥ {{ checkedTotalPrice }}
             </span>
           </div>
 
           <template v-if="checkedTotalPrice < checkedOriginTotalPrice">
-            <div class="text-right text-red font-weight-bold">
+            <div class="text-right text-error font-weight-bold">
               <span>商品原价:</span>
               <span class="price-display">
                 ￥ {{ checkedOriginTotalPrice }}
               </span>
             </div>
-            <div class="text-right text-red font-weight-bold">
+            <div class="text-right text-error font-weight-bold">
               <span>共计优惠:</span>
               <span class="price-display"> -￥{{ discountAmount }} </span>
             </div>
@@ -63,7 +65,7 @@
 
           <div
             v-show="hasIndefiniteGoods"
-            class="text-red text-caption"
+            class="text-error text-caption"
           >
             合计金额未包含面料类商品，面料品类商品预定后按实际米数结算
           </div>
@@ -72,6 +74,7 @@
         <v-btn
           color="primary"
           size="large"
+          variant="elevated"
           :width="180"
           :loading="commitLoading"
           :disabled="!isCheckedGoods"

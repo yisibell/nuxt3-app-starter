@@ -1,6 +1,5 @@
 <template>
   <v-text-field
-    :key="textFieldKey"
     :style="[{ maxWidth }]"
     :model-value="inputValue"
     :hide-details="hideDetails"
@@ -14,7 +13,8 @@
     class="lu-stepper"
     @click:prepend-inner="handleMinus"
     @click:append-inner="handlePlus"
-    @update:model-value="handleChange"
+    @update:model-value="handleModelValueUpdate"
+    @update:focused="handleFocusedChange"
   />
 </template>
 
@@ -47,12 +47,6 @@ const props = withDefaults(defineProps<{
 })
 
 const emit = defineEmits(['change'])
-
-const textFieldKey = ref(+new Date())
-
-const forceUpdateTextField = () => {
-  textFieldKey.value = +new Date()
-}
 
 // 空数据格式化
 const formatEmptyValue = (str: string | number) => {
@@ -104,34 +98,40 @@ const formatValue = (str: string | number) => {
   return tmp
 }
 
-const handleInput = (value: string | number) => {
+const handleInput = (value: string | number, emitChange = false) => {
+  if (props.readonly) return
+
   const newValue = formatValue(value)
 
-  if (!isEqual(newValue, inputValue.value)) {
+  if (emitChange && !isEqual(newValue, inputValue.value)) {
     emit('change', newValue)
   }
 
   inputValue.value = newValue
-
-  forceUpdateTextField()
 }
 
-const handleChange = (value: string) => {
-  if (props.readonly) return
-
+const handleModelValueUpdate = (value: string) => {
   handleInput(value)
 }
 
 const handleMinus = () => {
-  if (props.readonly) return
-
-  handleInput(Number(inputValue.value) - props.step)
+  handleInput(Number(inputValue.value) - props.step, true)
 }
 
 const handlePlus = () => {
-  if (props.readonly) return
+  handleInput(Number(inputValue.value) + props.step, true)
+}
 
-  handleInput(Number(inputValue.value) + props.step)
+const focusedValue = ref()
+const handleFocusedChange = (focused: boolean) => {
+  if (focused) {
+    focusedValue.value = inputValue.value
+  }
+  else {
+    if (!isEqual(focusedValue.value, inputValue.value)) {
+      emit('change', inputValue.value)
+    }
+  }
 }
 </script>
 

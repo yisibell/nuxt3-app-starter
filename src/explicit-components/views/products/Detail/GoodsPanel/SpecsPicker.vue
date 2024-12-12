@@ -1,7 +1,7 @@
 <template>
   <div>
     <AttrWrapper v-show="tips">
-      <span class="fs-12 text-red">
+      <span class="fs-12 text-error">
         {{ tips }}
       </span>
     </AttrWrapper>

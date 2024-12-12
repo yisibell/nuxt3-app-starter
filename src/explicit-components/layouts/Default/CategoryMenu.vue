@@ -24,7 +24,9 @@
           v-bind="props"
           @click="handleTopCategoryChange(i)"
         >
-          <div class="text-grey">
+          <div
+            :class="i === currTopCategoryIndex ? 'text-secondary' : 'text-grey'"
+          >
             {{ v.name }}
           </div>
         </v-tab>
@@ -123,7 +125,7 @@ const handleSecondaryCategoryChange = (pid: number) => {
   }
 
   &--active {
-    background-color: rgba($color: #1abc9c, $alpha: 0.17);
+    background-color: rgba(26,188,156, .17);
   }
 }
 </style>

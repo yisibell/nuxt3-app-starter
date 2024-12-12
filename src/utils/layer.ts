@@ -18,6 +18,7 @@ export class Layer {
     })
 
     this.loadingInstance = swal.mixin({
+      scrollbarPadding: false,
       showCancelButton: false,
       showConfirmButton: false,
       iconColor: 'transparent',

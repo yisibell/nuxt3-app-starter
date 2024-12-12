@@ -19,9 +19,8 @@
             v-if="v.value === checked"
             color="primary"
             class="mr-3"
-          >
-            mdi-checkbox-marked-circle
-          </v-icon>
+            icon="mdi-checkbox-marked-circle"
+          />
 
           <span> {{ v.label }} </span>
         </div>
@@ -61,6 +60,8 @@ const items = [
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  color: #000009;
+  font-weight: 400;
 
   &.checked {
     border-color: rgb(var(--v-theme-primary));

@@ -21,8 +21,9 @@
 
         <el-table-column
           label="商品信息"
-          align="center"
-          width="180"
+          align="left"
+          header-align="center"
+          width="250"
         >
           <template #default="{ row }">
             <BaseGoodsInfo :data="row" />

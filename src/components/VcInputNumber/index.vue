@@ -1,7 +1,6 @@
 <template>
   <el-input-number
-    :key="inputNumberKey"
-    :model-value="inputNumber"
+    v-model="inputNumber"
     :size="size"
     :max="max"
     :min="min"
@@ -11,9 +10,8 @@
 </template>
 
 <script setup lang="ts">
-const inputNumber = defineModel<number>()
-
 const props = withDefaults(defineProps<{
+  modelValue: number
   strictStep?: boolean
   step?: number
   min?: number
@@ -26,14 +24,18 @@ const props = withDefaults(defineProps<{
   max: 99999,
 })
 
-const emit = defineEmits(['change'])
+const emit = defineEmits(['change', 'update:modelValue'])
 
 const { strictStep, step, min, max } = toRefs(props)
 
-const inputNumberKey = ref(+new Date())
-const forceUpdateInputNumberKey = () => {
-  inputNumberKey.value = +new Date()
-}
+const inputNumber = computed({
+  get() {
+    return formatValue(props.modelValue)
+  },
+  set(value) {
+    emit('update:modelValue', formatValue(value))
+  },
+})
 
 const formatToStrictStepValue = (num: number) => {
   const mo = num % step.value
@@ -48,8 +50,10 @@ const formatToStrictStepValue = (num: number) => {
   }
 }
 
-const formatValue = (str: string | number) => {
-  let num = typeof str === 'number' ? str : Number.parseFloat(str)
+const formatValue = (inputValue?: string | number) => {
+  if (!inputValue) return props.min
+
+  let num = typeof inputValue === 'number' ? inputValue : Number.parseFloat(inputValue)
 
   // 严格步数
   if (strictStep.value) {
@@ -67,14 +71,7 @@ const formatValue = (str: string | number) => {
   return num
 }
 
-const handleInput = (value?: number) => {
-  inputNumber.value = formatValue(value || 0)
-
-  forceUpdateInputNumberKey()
-}
-
 const handleChange = (value?: number) => {
-  handleInput(value)
-  emit('change', value)
+  emit('change', formatValue(value))
 }
 </script>

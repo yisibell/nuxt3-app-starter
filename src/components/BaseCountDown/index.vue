@@ -28,7 +28,7 @@ const init = () => {
         return `  
           <div>
             <span class="text-grey">剩余</span>
-            <span class="text-red">${currentTime.days} 天 ${currentTime.hours} 时 ${currentTime.minutes} 分 ${currentTime.seconds} 秒</span>
+            <span class="text-error">${currentTime.days} 天 ${currentTime.hours} 时 ${currentTime.minutes} 分 ${currentTime.seconds} 秒</span>
             <span class="text-grey">自动签收</span>
           </div>
         `

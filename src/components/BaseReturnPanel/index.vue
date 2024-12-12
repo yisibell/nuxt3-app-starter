@@ -47,8 +47,9 @@
         <template #left>
           <ElTableColumn
             label="商品信息"
-            align="center"
-            width="160"
+            align="left"
+            header-align="center"
+            width="250"
           >
             <template #default="{ row }">
               <BaseGoodsInfo :data="row" />

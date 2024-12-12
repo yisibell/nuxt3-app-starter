@@ -40,7 +40,7 @@
         <div class="d-flex flex-column align-center">
           <span
             v-if="orderStatus == 4"
-            class="text-red"
+            class="text-error"
           >公司取消</span>
 
           <span v-else>公司确认</span>

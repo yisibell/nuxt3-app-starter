@@ -1,6 +1,6 @@
 <template>
   <v-card
-    elevation="16"
+    elevation="12"
     class="goods-card"
   >
     <v-img

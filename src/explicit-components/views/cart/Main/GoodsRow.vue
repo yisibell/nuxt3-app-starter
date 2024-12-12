@@ -6,7 +6,7 @@
         :md="2"
       >
         <div class="d-flex align-center">
-          <div style="min-width: 38px">
+          <div style="min-width: 58px">
             <slot
               name="selection"
               :row="data"
@@ -27,59 +27,63 @@
             <span
               class="goods-row__code"
               @click="handleToDetail"
-            >{{
-              data.code
-            }}</span>
+            >{{ data.code }}</span>
           </div>
           <v-row>
-            <v-col :md="3">
+            <v-col
+              :md="3"
+              class="text-caption goods-row__goods-style"
+            >
               <div
                 v-if="data.style"
-                class="d-flex text-body-2 mb-2"
+                class="d-flex"
               >
                 <span class="mr-2">款式:</span>
                 <span>{{ data.style }}</span>
               </div>
               <div
                 v-if="data.clothSeedName"
-                class="d-flex text-body-2 mb-2"
+                class="d-flex"
               >
                 <span class="mr-2">布种:</span>
                 <span>{{ data.clothSeedName }}</span>
               </div>
               <div
                 v-if="data.color"
-                class="d-flex text-body-2 mb-2"
+                class="d-flex"
               >
                 <span class="mr-2">颜色:</span>
                 <span>{{ data.color }}</span>
               </div>
               <div
                 v-if="data.size"
-                class="d-flex text-body-2 mb-2"
+                class="d-flex"
               >
                 <span class="mr-2">尺码:</span>
                 <span>{{ data.size }}</span>
               </div>
               <div
                 v-if="data.specs && data.specs.name"
-                class="d-flex text-body-2 mb-2"
+                class="d-flex"
               >
                 <span class="mr-2">规格:</span>
                 <span>{{ data.specs.name }}</span>
               </div>
             </v-col>
             <v-col :md="3">
-              <div class="d-flex text-body-2">
-                <span>{{ data.currency || '￥' }}</span>
-                <span>{{ data.price }}</span>
-                <span
-                  v-if="data.unit"
-                  class="mx-2"
-                >/</span>
-                <span class="text-caption">
-                  {{ data.unit }}
-                </span>
+              <div class="d-flex align-center">
+                <div class="text-subtitle-1">
+                  <span>{{ data.currency || '￥' }}</span>
+                  <span>{{ data.price }}</span>
+                </div>
+                <div v-if="data.unit">
+                  <span
+                    class="mx-1 text-caption"
+                  >/</span>
+                  <span class="text-body-2">
+                    {{ data.unit }}
+                  </span>
+                </div>
               </div>
 
               <div
@@ -88,7 +92,7 @@
               >
                 <v-chip
                   size="small"
-                  color="red"
+                  color="error"
                 >
                   <span>折扣单价：</span>
                   <span>{{ data.currency || '￥' }}</span>
@@ -122,8 +126,8 @@
                       v-model="currQuantity"
                       :step="stepQuantity"
                       :strict-step="strictStepQuantity"
-                      max-width="180px"
                       :readonly="!!data.clothSeedList"
+                      max-width="180px"
                       class="mr-4 goods-row__quantity"
                       @change="handleQuantityChange"
                     />
@@ -163,7 +167,13 @@
               :md="3"
               class="d-flex align-center justify-center"
             >
-              <span v-if="data.showSlash">预定后结算</span>
+              <v-chip
+                v-if="data.showSlash"
+                size="small"
+                color="warning"
+              >
+                预定后结算
+              </v-chip>
 
               <div v-else>
                 <div class="text-center">
@@ -173,7 +183,7 @@
                 <div v-if="data.discountTotalPrice > 0 && showDiscountChip">
                   <v-chip
                     size="small"
-                    color="red"
+                    color="error"
                   >
                     <span>折扣价：</span>
                     <span>
@@ -187,7 +197,7 @@
           </v-row>
           <div>
             <span
-              class="text-red cursor-pointer text-caption"
+              class="text-error cursor-pointer text-caption"
               @click="handleRemove"
             >
               删除
@@ -317,7 +327,12 @@ const strictStepQuantity = computed(() => {
 
     &:hover {
       text-decoration: underline;
+      color: rgb(var(--v-theme-primary));
     }
+  }
+
+  &__goods-style {
+    line-height: 20px;
   }
 
   &__quantity {

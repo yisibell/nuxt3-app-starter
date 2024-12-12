@@ -9,7 +9,7 @@
       <span class="mr-2">({{ `${v.quantity}${v.unit}` }})</span>
       <span
         v-if="v.remark"
-        class="text-red "
+        class="text-error "
       >{{ v.remark }}</span>
     </div>
   </div>

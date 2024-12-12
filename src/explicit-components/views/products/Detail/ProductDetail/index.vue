@@ -1,6 +1,6 @@
 <template>
   <div class="py-16">
-    <v-card elevation="16">
+    <v-card elevation="12">
       <v-card-text class="px-4 bg-grey-lighten-4">
         商品详情
       </v-card-text>
