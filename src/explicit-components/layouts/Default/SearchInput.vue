@@ -7,7 +7,7 @@
     <template #activator="{ props }">
       <v-text-field
         v-model.trim="formKeyword"
-        light
+        placeholder="搜索"
         color="secondary"
         append-inner-icon="mdi-magnify"
         variant="solo"
