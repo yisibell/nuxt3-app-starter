@@ -66,7 +66,7 @@
           <v-alert
             v-show="hasIndefiniteGoods"
             icon="$warning"
-            color="#C51162"
+            color="wineRed"
             variant="tonal"
             density="compact"
             text="合计金额未包含面料类商品，面料品类商品预定后按实际米数结算"

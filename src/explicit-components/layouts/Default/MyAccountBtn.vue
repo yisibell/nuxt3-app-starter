@@ -10,7 +10,7 @@
         icon
         v-bind="props"
       >
-        <v-icon>mdi-account</v-icon>
+        <v-icon icon="mdi-account" />
       </v-btn>
     </template>
 
@@ -51,7 +51,8 @@
           <v-btn
             block
             size="small"
-            plain
+            variant="text"
+            color="deep-purple-lighten-2"
             :loading="logoutLoading"
             @click="handleLogout"
           >

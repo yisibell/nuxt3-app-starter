@@ -3,7 +3,7 @@
     v-model="menuActive"
     :disabled="isCartEmpty"
     open-on-hover
-    offset-y
+    location="bottom"
     max-height="520"
   >
     <template #activator="{ props }">
@@ -22,7 +22,10 @@
       </v-btn>
     </template>
 
-    <v-card min-width="390">
+    <v-card
+      min-width="390"
+      class="scrollbar--primary"
+    >
       <v-card-text>
         <v-row
           v-for="(v, i) in cartItems"
@@ -79,15 +82,17 @@
               </v-col>
               <v-col
                 :md="6"
-                class="text-error"
+                class="text-center text-error"
               >
                 <div class="px-2">
-                  <span
+                  <v-chip
                     v-if="v.showSlash"
+                    color="warning"
+                    size="small"
                     class="text-caption"
                   >
                     预定后结算
-                  </span>
+                  </v-chip>
                   <span v-else>￥{{ v.total }}</span>
                 </div>
               </v-col>
@@ -104,7 +109,7 @@
             共<span class="text-error mx-2"> {{ totalNumber }} </span>件商品
           </div>
           <div class="mb-2">
-            <span>合计:</span>
+            <span class="mr-2">合计:</span>
             <span class="text-error font-weight-bold">￥{{ totalPrice }}</span>
           </div>
         </div>

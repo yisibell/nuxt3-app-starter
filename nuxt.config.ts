@@ -57,6 +57,7 @@ export default defineNuxtConfig({
               primary: '#0097C7',
               secondary: '#52A28F',
               error: '#ff5252',
+              wineRed: '#C51162',
               appbody: '#F3F5F8',
             },
           },

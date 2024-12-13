@@ -16,7 +16,18 @@
         rounded
         elevation="12"
         class="pa-6"
+        :disabled="submitLoading"
+        :loading="submitLoading"
       >
+        <template #loader="{ isActive }">
+          <v-progress-linear
+            :active="isActive"
+            color="deep-purple"
+            height="4"
+            indeterminate
+          />
+        </template>
+
         <v-card-title class="d-flex justify-center">
           用户登录
         </v-card-title>
@@ -28,6 +39,8 @@
         <v-alert
           v-model="errorAlertVisible"
           type="error"
+          variant="tonal"
+          color="wineRed"
           density="compact"
           class="ma-4"
         >
@@ -47,7 +60,7 @@
               label="用户账号"
               clearable
               class="mb-2"
-              color="primary"
+              color="deep-purple-lighten-2"
             />
 
             <v-text-field
@@ -60,13 +73,13 @@
               clearable
               variant="outlined"
               class="mb-4"
-              color="primary"
+              color="deep-purple-lighten-2"
             />
 
             <v-btn
               :loading="submitLoading"
               type="submit"
-              class="bg-primary"
+              color="deep-purple-lighten-2"
               block
               size="x-large"
             >

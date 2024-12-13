@@ -1,6 +1,7 @@
 <template>
   <v-menu
-    offset-y
+    location="bottom center"
+    :offset="4"
     :model-value="showMenu"
   >
     <template #activator="{ props }">
@@ -73,7 +74,7 @@
 
       <v-divider />
 
-      <v-card-text class="pr-0">
+      <v-card-text class="py-0 pr-0">
         <v-virtual-scroll
           :items="goodsNumberComboboxItems"
           max-height="480"
@@ -84,7 +85,8 @@
               :key="item.value"
               color="primary"
               rounded="xl"
-              class="mr-4"
+              class="mr-4 my-2"
+              density="compact"
               prepend-icon="mdi-magnify"
               @click="handleFuzzyMatch(item.value)"
             >

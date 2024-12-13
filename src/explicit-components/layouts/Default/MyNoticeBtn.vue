@@ -8,7 +8,7 @@
       :content="orders.length"
       color="red"
     >
-      <v-icon>mdi-bell</v-icon>
+      <v-icon icon="mdi-bell" />
     </v-badge>
   </v-btn>
 </template>
