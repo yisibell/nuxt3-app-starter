@@ -1,6 +1,8 @@
 <template>
   <div>
-    <template v-if="productsData.length">
+    <GoodsLoading v-if="productsLoading" />
+
+    <template v-else-if="productsData.length">
       <div class="d-flex justify-end">
         <v-btn-toggle
           v-model="viewMode"
@@ -11,17 +13,13 @@
           variant="tonal"
         >
           <v-btn
-            value="big"
+            v-for="(v, i) in viewProductsMode"
+            :key="i"
+            :value="v.value"
             size="small"
             class="mr-4"
           >
-            查看大图
-          </v-btn>
-          <v-btn
-            value="small"
-            size="small"
-          >
-            查看小图
+            {{ v.label }}
           </v-btn>
         </v-btn-toggle>
       </div>
@@ -55,11 +53,13 @@
 
 <script setup lang="ts">
 import GoodsList from './GoodsList.vue'
-import useProducts from '~/composables/logic/useProducts'
+import GoodsLoading from './GoodsLoading.vue'
+import useProducts, { viewProductsMode } from '~/composables/logic/useProducts'
+import type { IViewMode } from '~/composables/logic/useProducts'
 
-const viewMode = ref('big')
+const viewMode = ref<IViewMode>('big')
 
-const { currentPage, pageSize, total, updateProductsData, productsData }
+const { currentPage, pageSize, total, updateProductsData, productsData, productsLoading }
   = useProducts()
 
 const handleCurrentChange = () => {

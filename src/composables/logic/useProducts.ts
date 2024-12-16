@@ -1,6 +1,17 @@
 import { useProductsStore } from '~/store/products'
 import { useSiteStore } from '~/store/site'
 
+export type IViewMode = 'big' | 'small'
+
+export const viewProductsMode: { label: string, value: IViewMode }[] = [
+  {
+    label: '查看大图', value: 'big',
+  },
+  {
+    label: '查看小图', value: 'small',
+  },
+]
+
 /**
  * 商品列表数据组合逻辑
  */

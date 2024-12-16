@@ -2,7 +2,8 @@
   <v-menu
     location="bottom center"
     :offset="4"
-    :model-value="showMenu"
+    :close-on-content-click="false"
+    open-on-click
   >
     <template #activator="{ props }">
       <v-text-field
@@ -17,6 +18,7 @@
         clearable
         class="app-bar__search-input mr-4"
         v-bind="props"
+        @update:focused="handleInputFocused"
         @click:append-inner="handleEnter"
         @keydown.enter.prevent="handleEnter"
       >
@@ -65,43 +67,24 @@
     </template>
 
     <v-card
-      v-show="showMenu"
       elevation="8"
     >
-      <v-card-subtitle class="px-4 py-3">
-        猜你想搜
-      </v-card-subtitle>
-
-      <v-divider />
-
-      <v-card-text class="py-0 pr-0">
-        <v-virtual-scroll
-          :items="goodsNumberComboboxItems"
-          max-height="480"
-          class="scrollbar--primary"
-        >
-          <template #default="{ item }">
-            <v-list-item
-              :key="item.value"
-              color="primary"
-              rounded="xl"
-              class="mr-4 my-2"
-              density="compact"
-              prepend-icon="mdi-magnify"
-              @click="handleFuzzyMatch(item.value)"
-            >
-              <v-list-item-subtitle>
-                {{ item.text }}
-              </v-list-item-subtitle>
-            </v-list-item>
-          </template>
-        </v-virtual-scroll>
-      </v-card-text>
+      <HistorySearch
+        :type="formType"
+        @search="handleFuzzyMatch"
+      />
+      <GuessSearch
+        v-if="formType === 1"
+        :items="goodsNumberComboboxItems"
+        @search="handleFuzzyMatch"
+      />
     </v-card>
   </v-menu>
 </template>
 
 <script setup lang="ts">
+import HistorySearch from './HistorySearch.vue'
+import GuessSearch from './GuessSearch.vue'
 import useProducts from '~/composables/logic/useProducts'
 import { useSiteStore } from '~/store/site'
 import { useGoodsApi } from '~/composables/api/modules/goods'
@@ -145,9 +128,11 @@ const handleFuzzyMatch = (value: string) => {
   handleEnter()
 }
 
-const showMenu = computed(
-  () => goodsNumberComboboxItems.value.length > 0 && formType.value === 1,
-)
+const inputFocused = ref(false)
+
+const handleInputFocused = (focused: boolean) => {
+  inputFocused.value = focused
+}
 
 const goodsNumberList = ref<string[]>([])
 const goodsNumberComboboxItems = computed(() => {

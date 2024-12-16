@@ -18,15 +18,31 @@
 <script setup lang="ts">
 import GoodsCard from './GoodsCard.vue'
 import type { IGoodsInfoObject } from '~/composables/api/interfaces/goods'
+import type { IViewMode } from '~/composables/logic/useProducts'
 
 const props = withDefaults(defineProps<{
   items: IGoodsInfoObject[]
-  viewMode: string
+  viewMode: IViewMode
 }>(), {
   items: () => [],
   viewMode: 'big',
 })
 
-const perRowCols = computed(() => (props.viewMode === 'big' ? 4 : 3))
-const imgHeight = computed(() => (props.viewMode === 'big' ? 280 : 220))
+const perRowCols = computed(() => {
+  switch (props.viewMode) {
+    case 'big':
+      return 4
+    default:
+      return 3
+  }
+})
+
+const imgHeight = computed(() => {
+  switch (props.viewMode) {
+    case 'big':
+      return 280
+    default:
+      return 220
+  }
+})
 </script>
