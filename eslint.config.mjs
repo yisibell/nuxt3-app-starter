@@ -4,6 +4,7 @@ export default createConfigForNuxt({
   features: {
     tooling: true,
     stylistic: true,
+    formatters: true,
   },
 }, {
   rules: {

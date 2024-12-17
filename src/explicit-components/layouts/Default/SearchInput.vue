@@ -1,5 +1,6 @@
 <template>
   <v-menu
+    v-model="menuVisible"
     location="bottom center"
     :offset="4"
     :close-on-content-click="false"
@@ -18,7 +19,6 @@
         clearable
         class="app-bar__search-input mr-4"
         v-bind="props"
-        @update:focused="handleInputFocused"
         @click:append-inner="handleEnter"
         @keydown.enter.prevent="handleEnter"
       >
@@ -75,7 +75,7 @@
       />
       <GuessSearch
         v-if="formType === 1"
-        :items="goodsNumberComboboxItems"
+        :keyword="formKeyword"
         @search="handleFuzzyMatch"
       />
     </v-card>
@@ -87,10 +87,8 @@ import HistorySearch from './HistorySearch.vue'
 import GuessSearch from './GuessSearch.vue'
 import useProducts from '~/composables/logic/useProducts'
 import { useSiteStore } from '~/store/site'
-import { useGoodsApi } from '~/composables/api/modules/goods'
 
 const SiteStore = useSiteStore()
-const GoodsApi = useGoodsApi()
 
 const formType = computed({
   get() {
@@ -128,35 +126,7 @@ const handleFuzzyMatch = (value: string) => {
   handleEnter()
 }
 
-const inputFocused = ref(false)
-
-const handleInputFocused = (focused: boolean) => {
-  inputFocused.value = focused
-}
-
-const goodsNumberList = ref<string[]>([])
-const goodsNumberComboboxItems = computed(() => {
-  return goodsNumberList.value
-    .filter(
-      e =>
-        formKeyword.value
-        && new RegExp(`${formKeyword.value.toLowerCase()}`).test(
-          e.toLowerCase(),
-        ),
-    )
-    .map(v => ({ text: v, value: v }))
-})
-
-const fetchGoodsNumberList = async () => {
-  const { code, data } = await GoodsApi.getGoodsNumberAll()
-  if (code === 0) {
-    goodsNumberList.value = data.numberList
-  }
-}
-
-onMounted(() => {
-  fetchGoodsNumberList()
-})
+const menuVisible = ref(false)
 </script>
 
 <style lang="scss" scoped>

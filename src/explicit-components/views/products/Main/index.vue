@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <ClientOnly>
     <GoodsLoading v-if="productsLoading" />
 
     <template v-else-if="productsData.length">
@@ -17,7 +17,7 @@
             :key="i"
             :value="v.value"
             size="small"
-            class="mr-4"
+            :class="v.className"
           >
             {{ v.label }}
           </v-btn>
@@ -48,7 +48,7 @@
         @current-change="handleCurrentChange"
       />
     </div>
-  </div>
+  </ClientOnly>
 </template>
 
 <script setup lang="ts">
@@ -56,6 +56,10 @@ import GoodsList from './GoodsList.vue'
 import GoodsLoading from './GoodsLoading.vue'
 import useProducts, { viewProductsMode } from '~/composables/logic/useProducts'
 import type { IViewMode } from '~/composables/logic/useProducts'
+
+defineOptions({
+  name: 'ProductsMain',
+})
 
 const viewMode = ref<IViewMode>('big')
 

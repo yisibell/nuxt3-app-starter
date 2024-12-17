@@ -3,9 +3,9 @@ import { useSiteStore } from '~/store/site'
 
 export type IViewMode = 'big' | 'small'
 
-export const viewProductsMode: { label: string, value: IViewMode }[] = [
+export const viewProductsMode: { label: string, value: IViewMode, className?: string }[] = [
   {
-    label: '查看大图', value: 'big',
+    label: '查看大图', value: 'big', className: 'mr-4',
   },
   {
     label: '查看小图', value: 'small',

@@ -1,18 +1,19 @@
 <template>
-  <v-row>
-    <v-col
+  <div
+    class="goods-list"
+  >
+    <div
       v-for="(v, i) in items"
       :key="i"
-      :cols="6"
-      :md="perRowCols"
-      :xl="2"
+      class="goods-list__item"
+      :class="`${viewMode}-mode`"
     >
       <GoodsCard
         :data="v"
         :img-height="imgHeight"
       />
-    </v-col>
-  </v-row>
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -28,15 +29,6 @@ const props = withDefaults(defineProps<{
   viewMode: 'big',
 })
 
-const perRowCols = computed(() => {
-  switch (props.viewMode) {
-    case 'big':
-      return 4
-    default:
-      return 3
-  }
-})
-
 const imgHeight = computed(() => {
   switch (props.viewMode) {
     case 'big':
@@ -46,3 +38,97 @@ const imgHeight = computed(() => {
   }
 })
 </script>
+
+<style lang="scss" scoped>
+.goods-list {
+  --media-card-gap: 16px;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    margin-right: var(--media-card-gap);
+    margin-bottom: var(--media-card-gap);
+  }
+
+  @media screen and (max-width: 960px) {
+    &__item {
+      width: calc(calc(100% - calc(var(--media-card-gap) * 1)) / 2);
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+
+      &.small-mode {
+        width: calc(calc(100% - calc(var(--media-card-gap) * 2)) / 3);
+        margin-right: var(--media-card-gap);
+        margin-bottom: var(--media-card-gap);
+
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 960px) and (max-width: 1280px) {
+    &__item {
+      width: calc(calc(100% - calc(var(--media-card-gap) * 2)) / 3);
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+
+      &.small-mode {
+        width: calc(calc(100% - calc(var(--media-card-gap) * 3)) / 4);
+        margin-right: var(--media-card-gap);
+        margin-bottom: var(--media-card-gap);
+
+        &:nth-child(4n) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 1280px) and (max-width: 1919px) {
+    &__item {
+      width: calc(calc(100% - calc(var(--media-card-gap) * 3)) / 4);
+
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
+
+      &.small-mode {
+        width: calc(calc(100% - calc(var(--media-card-gap) * 4)) / 5);
+        margin-right: var(--media-card-gap);
+        margin-bottom: var(--media-card-gap);
+
+        &:nth-child(5n) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 1920px) {
+    &__item {
+      width: calc(calc(100% - calc(var(--media-card-gap) * 5)) / 6);
+
+      &:nth-child(6n) {
+        margin-right: 0;
+      }
+
+      &.small-mode {
+        width: calc(calc(100% - calc(var(--media-card-gap) * 7)) / 8);
+        margin-right: var(--media-card-gap);
+        margin-bottom: var(--media-card-gap);
+
+        &:nth-child(8n) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+</style>

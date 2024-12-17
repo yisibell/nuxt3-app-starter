@@ -20,6 +20,7 @@
       <v-chip
         v-for="(v, i) in items"
         :key="i"
+        color="grey"
         closable
         size="small"
         class="mr-2 mb-2 cursor-pointer"

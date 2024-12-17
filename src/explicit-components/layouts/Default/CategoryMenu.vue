@@ -125,7 +125,7 @@ const handleSecondaryCategoryChange = (pid: number) => {
   }
 
   &--active {
-    background-color: rgba(26,188,156, .17);
+    background-color: rgba(26, 188, 156, 0.17);
   }
 }
 </style>
