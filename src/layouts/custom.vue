@@ -1,11 +1,5 @@
 <template>
-  <v-app>
-    <v-main>
-      <slot name="default" />
-    </v-main>
-  </v-app>
+  <div>
+    <slot name="default" />
+  </div>
 </template>
-
-<script lang="ts" setup>
-
-</script>

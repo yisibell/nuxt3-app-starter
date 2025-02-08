@@ -37,21 +37,17 @@
     "release": "changelogen --release && git push --follow-tags"
   },
   "dependencies": {
-    "@element-plus/icons-vue": "^2.3.1",
     "@pinia/nuxt": "^0.9.0",
     "countdownbar": "^1.6.0",
     "dayjs": "^1.11.13",
-    "element-plus": "^2.9.3",
     "lodash-es": "^4.17.21",
     "number-precision": "^1.6.0",
     "sweetalert2": "^11.15.10",
-    "swiper": "^11.2.2",
-    "vuetify": "^3.7.11"
+    "swiper": "^11.2.2"
   },
   "devDependencies": {
-    "@element-plus/nuxt": "^1.1.1",
-    "@mdi/font": "^7.4.47",
     "@nuxt/eslint-config": "^1.0.1",
+    "@nuxtjs/i18n": "^9.2.0",
     "@pinia-plugin-persistedstate/nuxt": "^1.2.1",
     "changelogen": "^0.5.7",
     "consola": "^3.4.0",
@@ -65,8 +61,7 @@
     "nuxt-proxy-request": "^2.1.0",
     "nuxt-svg-icons": "^2.0.5",
     "prettier": "^3.4.2",
-    "sass": "^1.84.0",
-    "vuetify-nuxt-module": "^0.18.3"
+    "sass": "^1.84.0"
   },
   "engines": {
     "node": ">=20"

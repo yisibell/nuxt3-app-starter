@@ -13,14 +13,13 @@ export default defineNuxtConfig({
     'nuxt-proxy-request',
     '@pinia/nuxt',
     '@pinia-plugin-persistedstate/nuxt',
-    '@element-plus/nuxt',
     'nuxt-svg-icons',
-    'vuetify-nuxt-module',
+    '@nuxtjs/i18n',
   ],
   devtools: {
     enabled: false,
   },
-  css: ['~/assets/styles/index.scss', '@mdi/font/css/materialdesignicons.css'],
+  css: ['~/assets/styles/index.scss'],
   appConfig: publicRuntimeConfig,
   srcDir: 'src/',
   compatibilityDate: '2024-12-03',
@@ -36,34 +35,21 @@ export default defineNuxtConfig({
   },
   telemetry: false,
 
-  elementPlus: {
-    defaultLocale: 'zh-cn',
+  i18n: {
+    lazy: true,
+    defaultLocale: 'en',
+    locales: [
+      {
+        code: 'en',
+        file: 'en-ES.json',
+      },
+      {
+        code: 'fr',
+        file: 'fr-FR.json',
+      },
+    ],
   },
 
   proxy: allConfig.proxy,
 
-  vuetify: {
-    moduleOptions: {
-      /* module specific options */
-    },
-    vuetifyOptions: {
-      /* vuetify options */
-      theme: {
-        defaultTheme: 'light',
-        themes: {
-          light: {
-            dark: false,
-            colors: {
-              primary: '#0097C7',
-              secondary: '#52A28F',
-              error: '#ff5252',
-              wineRed: '#C51162',
-              appbody: '#F3F5F8',
-            },
-          },
-        },
-      },
-
-    },
-  },
 })
