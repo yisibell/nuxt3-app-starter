@@ -1,5 +1,5 @@
 import useRequest from '../request'
-import type { IUserLoginParams, ILoginResData, IUserInfo, IUserAddressData } from '~/composables/api/interfaces/user'
+import type { IUserLoginParams, ILoginResData } from '~/composables/api/interfaces/user'
 
 export const useUserApi = () => {
   const { request } = useRequest()
@@ -8,27 +8,22 @@ export const useUserApi = () => {
   const login = (body: IUserLoginParams) => request<ILoginResData>('/user/login', {
     method: 'POST',
     body,
-  })
+  }, { loading: true })
 
   /** 登出 */
   const logout = () => request('/user/logout', {
     method: 'GET',
   })
 
-  /** 获取用户信息 */
-  const info = () => request<IUserInfo>('/user/info', {
-    method: 'GET',
-  })
-
-  /** 获取用户地址 */
-  const getUserAddress = () => request<IUserAddressData>('/user/addresses', {
-    method: 'POST',
-  })
+  const getUserInfo = () => {
+    return request('/user/info', {
+      method: 'GET',
+    })
+  }
 
   return {
     login,
     logout,
-    info,
-    getUserAddress,
+    getUserInfo,
   }
 }

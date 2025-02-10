@@ -34,21 +34,22 @@
     "prepare": "nuxt prepare",
     "cleanup": "nuxt cleanup",
     "lint": "eslint .",
-    "release": "changelogen --release && git push --follow-tags"
+    "release": "changelogen --release && git push --follow-tags",
+    "pack-lang": "node ./scripts/pack-lang.js"
   },
   "dependencies": {
     "@pinia/nuxt": "^0.9.0",
     "countdownbar": "^1.6.0",
     "dayjs": "^1.11.13",
     "lodash-es": "^4.17.21",
-    "number-precision": "^1.6.0",
-    "sweetalert2": "^11.15.10",
-    "swiper": "^11.2.2"
+    "swiper": "^11.2.2",
+    "vant": "^4.9.17"
   },
   "devDependencies": {
     "@nuxt/eslint-config": "^1.0.1",
     "@nuxtjs/i18n": "^9.2.0",
     "@pinia-plugin-persistedstate/nuxt": "^1.2.1",
+    "@vant/nuxt": "^1.0.6",
     "changelogen": "^0.5.7",
     "consola": "^3.4.0",
     "cross-env": "^7.0.3",
@@ -58,10 +59,12 @@
     "execa": "^9.5.2",
     "minimist": "^1.2.8",
     "nuxt": "^3.15.4",
+    "nuxt-multi-cache": "^3.4.0",
     "nuxt-proxy-request": "^2.1.0",
     "nuxt-svg-icons": "^2.0.5",
     "prettier": "^3.4.2",
-    "sass": "^1.84.0"
+    "sass": "^1.84.0",
+    "unstorage": "^1.14.4"
   },
   "engines": {
     "node": ">=20"

@@ -1,17 +1,21 @@
 # nuxt3-app-starter
 
-A ssr app starter built by Nuxt (3) + vue (3) + pinia + ofetch + element-plus + typescript + sass !!!
+A ssr app starter built by Nuxt (3) + vue (3) + pinia + ofetch + vant + typescript + sass !!!
+
+- [docs](./docs/README.md)
 
 # Features
 
+- **pnpm** for package management.
 - Support **http(s) proxy** in **development** and **server**.
 - Friendly **SVG** icon usage.
 - Support **PM2**.
 - Using **pinia** for state management.
 - Using **ofetch** for http request.
-- Using **element-plus** ui component libary.
+- Using **vant** ui component libary.
 - Support **Typescript**.
-- Styling via **sass**.
+- Styling via **sass** and **unocss**.
+- Internationalization via **@nuxtjs/i18n**.
 - Easy to use environment configuration.
 
 ## Setup

@@ -1,5 +1,6 @@
+import { showLoadingToast } from 'vant'
+import type { ToastWrapperInstance } from 'vant'
 import { useSiteStore } from '~/store/site'
-import { $layer } from '~/utils/layer'
 
 export interface IRequestResponse<T = unknown> {
   data: T
@@ -61,13 +62,19 @@ const useRequest = () => {
 
   const request = <T>(url: IFetchMethodParams[0], opts?: IFetchMethodParams[1], extraOpts?: IRequestExtraOptions) => {
     return new Promise<IRequestResponse<T>>((resolve, reject) => {
+      let toast: ToastWrapperInstance
+
       if (extraOpts?.loading) {
-        $layer.showLoading()
+        toast = showLoadingToast({
+          message: 'Loading',
+          forbidClick: true,
+          duration: 0,
+        })
       }
 
       fetchInstance<IRequestResponse<T>>(url, opts).then(resolve).catch(reject).finally(() => {
         if (extraOpts?.loading) {
-          $layer.closeLoading()
+          toast.close()
         }
       })
     })

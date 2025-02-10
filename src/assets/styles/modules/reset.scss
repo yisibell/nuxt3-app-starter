@@ -54,9 +54,3 @@
   }
 }
 
-// 禁止滚动
-.lu-overflow-y-hidden {
-  overflow: hidden !important;
-  overscroll-behavior: none;
-  height: 100vh;
-}

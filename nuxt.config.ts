@@ -15,6 +15,8 @@ export default defineNuxtConfig({
     '@pinia-plugin-persistedstate/nuxt',
     'nuxt-svg-icons',
     '@nuxtjs/i18n',
+    '@vant/nuxt',
+    'nuxt-multi-cache',
   ],
   devtools: {
     enabled: false,
@@ -36,20 +38,43 @@ export default defineNuxtConfig({
   telemetry: false,
 
   i18n: {
+    vueI18n: './i18n/i18n.config.ts',
+    strategy: 'prefix_and_default',
     lazy: true,
     defaultLocale: 'en',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'savedLang',
+      redirectOn: 'root',
+    },
     locales: [
       {
         code: 'en',
-        file: 'en-ES.json',
+        file: 'en.ts',
       },
       {
         code: 'fr',
-        file: 'fr-FR.json',
+        file: 'fr.ts',
       },
+      // ...
     ],
+
+  },
+
+  multiCache: {
+    debug: allConfig.NUXT_APP_ENV === 'development',
+    route: {
+      enabled: allConfig.routeCache,
+    },
+    component: {
+      enabled: allConfig.componentCache,
+    },
   },
 
   proxy: allConfig.proxy,
+
+  vant: {
+    defaultLocale: 'en-US',
+  },
 
 })
