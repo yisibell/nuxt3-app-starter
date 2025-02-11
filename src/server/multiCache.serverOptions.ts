@@ -9,8 +9,6 @@ export default defineMultiCacheOptions({
 
       const savedLang = getCookie(event, 'savedLang')
 
-      console.log('-----------------------', savedLang)
-
       // Handle specific routes that need query strings.
       if (path.startsWith('/api/query/products')) {
         const { id } = getQuery(event)
@@ -20,7 +18,7 @@ export default defineMultiCacheOptions({
       }
 
       // Remove query string from path.
-      return path.split('?')[0]
+      return `${path.split('?')[0]}_${savedLang}`
     },
     // storage: {
     //   driver: redisDriver({
@@ -31,4 +29,5 @@ export default defineMultiCacheOptions({
     //   }),
     // },
   },
+
 })

@@ -8,9 +8,13 @@ export interface IEnvConfig {
     options: ProxyOptions
   }
 
-  routeCache?: boolean
-
-  componentCache?: boolean
+  multiCache?: {
+    private?: boolean
+    routeCache?: boolean
+    componentCache?: boolean
+    apiAuthorization?: string
+    debug?: boolean
+  }
 }
 
 export default async function (env?: string): Promise<IEnvConfig> {

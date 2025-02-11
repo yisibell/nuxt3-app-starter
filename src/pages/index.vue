@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="pa-16">
     <div>
       <span>{{ $t('welcome') }}</span>
       <span>{{ $t('hello') }}</span>
@@ -34,6 +34,7 @@ import { useSiteStore } from '@/store/site'
 definePageMeta({
   layout: 'default',
   title: 'Home',
+  pageName: 'index',
 })
 
 const route = useRoute()
@@ -57,6 +58,8 @@ onMounted(() => {
   nuxtApp.$i18n.mergeLocaleMessage(cookieLocale.value, {
     hello: `Hello ${cookieLocale.value}`,
   })
+
+  console.log(nuxtApp)
 })
 
 const UserApi = useUserApi()

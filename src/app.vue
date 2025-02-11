@@ -14,8 +14,18 @@ useHead({
   },
 })
 
+const route = useRoute()
+
+const { data } = await useAsyncData(() => {
+  return Promise.resolve({ description: `这是描述-${route.meta.pageName}` })
+})
+
+useSeoMeta({
+  description: data.value?.description,
+})
+
 useRouteCache((helper) => {
-  const cachedTimes = 7 * 60 * 60 * 24 // 7 天
+  const cachedTimes = 1 * 60 * 60 * 24 // 1 天
 
   helper.setCacheable().setMaxAge(cachedTimes)
 })

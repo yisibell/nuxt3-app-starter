@@ -17,6 +17,7 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     '@vant/nuxt',
     'nuxt-multi-cache',
+    '@unocss/nuxt',
   ],
   devtools: {
     enabled: false,
@@ -62,12 +63,18 @@ export default defineNuxtConfig({
   },
 
   multiCache: {
-    debug: allConfig.NUXT_APP_ENV === 'development',
+    debug: allConfig?.multiCache?.debug,
     route: {
-      enabled: allConfig.routeCache,
+      enabled: allConfig?.multiCache?.routeCache,
     },
     component: {
-      enabled: allConfig.componentCache,
+      enabled: allConfig?.multiCache?.componentCache,
+    },
+    api: {
+      enabled: true,
+      prefix: '/__nuxt_multi_cache',
+      authorization: false,
+      cacheTagInvalidationDelay: 60000,
     },
   },
 

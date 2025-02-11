@@ -49,6 +49,7 @@
     "@nuxt/eslint-config": "^1.0.1",
     "@nuxtjs/i18n": "^9.2.0",
     "@pinia-plugin-persistedstate/nuxt": "^1.2.1",
+    "@unocss/nuxt": "^65.4.3",
     "@vant/nuxt": "^1.0.6",
     "changelogen": "^0.5.7",
     "consola": "^3.4.0",
@@ -64,6 +65,7 @@
     "nuxt-svg-icons": "^2.0.5",
     "prettier": "^3.4.2",
     "sass": "^1.84.0",
+    "unocss": "^65.4.3",
     "unstorage": "^1.14.4"
   },
   "engines": {
