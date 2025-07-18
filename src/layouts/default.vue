@@ -1,9 +1,7 @@
 <template>
-  <DefaultLayout>
+  <div>
     <slot name="default" />
-  </DefaultLayout>
+  </div>
 </template>
 
-<script lang="ts" setup>
-import DefaultLayout from '~/explicit-components/layouts/Default/index.vue'
-</script>
+

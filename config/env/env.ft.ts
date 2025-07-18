@@ -16,7 +16,7 @@ export default {
   },
 
   multiCache: {
-    routeCache: true,
+    routeCache: false,
 
     componentCache: true,
   },
