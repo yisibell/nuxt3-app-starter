@@ -58,7 +58,7 @@
     "eslint-plugin-format": "^1.0.1",
     "execa": "^9.6.0",
     "minimist": "^1.2.8",
-    "nuxt": "3.16.0",
+    "nuxt": "3.16.2",
     "nuxt-multi-cache": "^3.4.0",
     "nuxt-proxy-request": "^2.1.0",
     "nuxt-svg-icons": "^2.5.0",
