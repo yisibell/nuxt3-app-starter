@@ -8,6 +8,8 @@ export default defineNuxtModule({
         item.prefetch = false
         item.preload = false
       }
+
+      console.log('>>>>>>>>>', manifest)
     })
   },
 })

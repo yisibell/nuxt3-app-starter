@@ -27,7 +27,7 @@ export default defineNuxtConfig({
   sourcemap: allConfig.NUXT_APP_ENV === 'development',
 
   features: {
-    inlineStyles: false,
+    inlineStyles: true,
   },
   compatibilityDate: '2024-12-03',
 
@@ -50,6 +50,10 @@ export default defineNuxtConfig({
               const moduleName = matched[1]
 
               return `page-${moduleName}`
+            }
+
+            if (id.includes('src/components/with/purchase/')) {
+              return 'components-quick-purchase'
             }
 
             if (id.includes('src/components/base')) {
