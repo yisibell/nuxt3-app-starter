@@ -1,5 +1,7 @@
 <template>
-  <div class="pa-16">
-    home
-  </div>
+  <HomeView />
 </template>
+
+<script lang="ts" setup>
+import HomeView from '@/explicitComponents/views/home/index.vue'
+</script>

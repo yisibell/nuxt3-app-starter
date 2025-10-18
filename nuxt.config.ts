@@ -15,6 +15,7 @@ export default defineNuxtConfig({
     'nuxt-svg-icons',
     '@vant/nuxt',
     '@unocss/nuxt',
+    '~/modules/vitalizer.ts',
   ],
   devtools: {
     enabled: false,
@@ -22,15 +23,41 @@ export default defineNuxtConfig({
   css: ['~/assets/styles/index.scss'],
   appConfig: publicRuntimeConfig,
   srcDir: 'src/',
-  compatibilityDate: '2024-12-03',
 
   sourcemap: allConfig.NUXT_APP_ENV === 'development',
+
+  features: {
+    inlineStyles: false,
+  },
+  compatibilityDate: '2024-12-03',
 
   vite: {
     css: {
       preprocessorOptions: {
         scss: {
           api: 'modern',
+        },
+      },
+    },
+    build: {
+      modulePreload: false,
+      rollupOptions: {
+        output: {
+          manualChunks(id) {
+            const matched = id.match(/\/views\/([^/]+)\//)
+
+            if (matched && matched[1]) {
+              const moduleName = matched[1]
+
+              return `page-${moduleName}`
+            }
+
+            if (id.includes('src/components/base')) {
+              return 'components-common'
+            }
+
+            return null
+          },
         },
       },
     },
