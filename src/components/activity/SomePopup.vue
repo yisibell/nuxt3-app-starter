@@ -1,6 +1,8 @@
 <template>
   <div class="activity-some-popup">
     some activity popup
+
+    <!-- <SomeCompA /> -->
   </div>
 </template>
 

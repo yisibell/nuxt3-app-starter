@@ -9,7 +9,7 @@ export default defineNuxtModule({
         item.preload = false
       }
 
-      console.log('>>>>>>>>>', manifest)
+      // console.log('>>>>>>>>>', manifest)
     })
   },
 })

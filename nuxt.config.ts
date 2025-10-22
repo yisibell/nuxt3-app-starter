@@ -16,6 +16,7 @@ export default defineNuxtConfig({
     '@vant/nuxt',
     '@unocss/nuxt',
     '~/modules/vitalizer.ts',
+    '~/modules/chunkStrategy/module',
   ],
   devtools: {
     enabled: false,
@@ -24,7 +25,7 @@ export default defineNuxtConfig({
   appConfig: publicRuntimeConfig,
   srcDir: 'src/',
 
-  sourcemap: allConfig.NUXT_APP_ENV === 'development',
+  sourcemap: true,
 
   features: {
     inlineStyles: true,
@@ -41,29 +42,11 @@ export default defineNuxtConfig({
     },
     build: {
       modulePreload: false,
-      rollupOptions: {
-        output: {
-          manualChunks(id) {
-            const matched = id.match(/\/views\/([^/]+)\//)
+      // rollupOptions: {
+      //   output: {
 
-            if (matched && matched[1]) {
-              const moduleName = matched[1]
-
-              return `page-${moduleName}`
-            }
-
-            if (id.includes('src/components/with/purchase/')) {
-              return 'components-quick-purchase'
-            }
-
-            if (id.includes('src/components/base')) {
-              return 'components-common'
-            }
-
-            return null
-          },
-        },
-      },
+      //   },
+      // },
     },
   },
   telemetry: false,

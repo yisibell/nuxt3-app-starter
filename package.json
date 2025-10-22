@@ -61,7 +61,7 @@
     "nuxt": "3.16.0",
     "nuxt-multi-cache": "^3.4.0",
     "nuxt-proxy-request": "^2.1.0",
-    "nuxt-svg-icons": "^2.5.0",
+    "nuxt-svg-icons": "^3.2.1",
     "prettier": "^3.6.2",
     "sass": "^1.89.2",
     "unocss": "^65.5.0",
