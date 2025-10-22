@@ -24,7 +24,7 @@
     "pm2:docker:start": "pm2-runtime start ecosystem.config.js",
     "pm2:start": "pm2 start ecosystem.config.cjs",
     "pm2:docker:start-ft": "pm2-runtime start ecosystem.ft.config.js",
-    "pm2:start-ft": "pm2 start ecosystem.ft.config.cjs",
+    "pm2:start-ft": "pm2 delete NuxtAppStarter-ft || true && pm2 start ecosystem.ft.config.cjs",
     "dev": "node ./scripts/dev.js",
     "build:ft": "node ./scripts/build.js --env=ft",
     "build": "node ./scripts/build.js --env=production",
