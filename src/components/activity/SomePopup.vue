@@ -2,7 +2,7 @@
   <div class="activity-some-popup">
     some activity popup
 
-    <!-- <SomeCompA /> -->
+    <SomeCompA />
   </div>
 </template>
 

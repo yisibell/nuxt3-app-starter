@@ -4,6 +4,8 @@
       home
     </div>
 
+    <SomeCompB />
+
     <BaseCountDown :time="1000 * 60" />
   </div>
 </template>

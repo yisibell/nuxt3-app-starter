@@ -18,7 +18,7 @@ export default defineNuxtModule({
     nuxt.hook('vite:extendConfig', (config, { isServer }) => {
       if (!config.build?.rollupOptions?.output || Array.isArray(config.build.rollupOptions.output) || isServer) return
 
-      config.build.rollupOptions.output.manualChunks = (id) => {
+      config.build.rollupOptions.output.manualChunks = (id, meta) => {
         // SVG
         const svgIconChunkName = getSvgIconChunkName(id)
         if (svgIconChunkName) {
@@ -35,7 +35,7 @@ export default defineNuxtModule({
         if (
           dirs.some(dir => id.includes(dir))
         ) {
-          return getSharedChunkName(id)
+          return getSharedChunkName(id, meta)
         }
       }
     })

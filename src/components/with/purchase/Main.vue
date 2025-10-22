@@ -1,6 +1,8 @@
 <template>
   <div class="with-purchase-main">
     purchase main content
+
+    <SomeCompA />
   </div>
 </template>
 
