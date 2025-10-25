@@ -39,28 +39,19 @@ export default defineNuxtConfig({
         },
       },
     },
-    build: {
-      modulePreload: false,
-      rollupOptions: {
-        output: {
-          manualChunks(id) {
-            const matched = id.match(/\/views\/([^/]+)\//)
 
-            if (matched && matched[1]) {
-              const moduleName = matched[1]
+    $client: {
+      build: {
+        modulePreload: false,
+        rollupOptions: {
+          output: {
+            manualChunks(id) {
+              if (id.includes('src/components/')) {
+                return 'shared-components'
+              }
 
-              return `page-${moduleName}`
-            }
-
-            if (id.includes('src/components/with/purchase/')) {
-              return 'components-quick-purchase'
-            }
-
-            if (id.includes('src/components/base')) {
-              return 'components-common'
-            }
-
-            return null
+              return null
+            },
           },
         },
       },

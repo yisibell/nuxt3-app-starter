@@ -6,7 +6,7 @@ export default defineNuxtModule({
       for (const item of Object.values(manifest)) {
         item.dynamicImports = []
         item.prefetch = false
-        item.preload = false
+        // item.preload = false
       }
 
       console.log('>>>>>>>>>', manifest)
