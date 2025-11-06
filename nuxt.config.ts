@@ -16,7 +16,6 @@ export default defineNuxtConfig({
     '@vant/nuxt',
     '@unocss/nuxt',
     '~/modules/vitalizer.ts',
-    '~/modules/chunkStrategy/module',
   ],
   devtools: {
     enabled: false,

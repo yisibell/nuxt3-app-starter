@@ -14,5 +14,6 @@ const appConfig = useAppConfig()
 
 onMounted(() => {
   console.log(appConfig)
+  console.error('Test Error')
 })
 </script>

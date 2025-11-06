@@ -11,6 +11,9 @@ module.exports = {
         PORT: 3389,
         NUXT_APP_ENV: 'production',
       },
+      log_type: 'json',
+      time: true,
+      merge_logs: true,
     },
   ],
 }
