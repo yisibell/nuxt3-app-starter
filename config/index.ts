@@ -1,32 +1,16 @@
 import type { ProxyOptions } from 'nuxt-proxy-request'
-import devConfig from './env/env.development'
+import type { NuxtConfConfigObject, NuxtConfValue } from '../src/modules/conf/types'
 
-export interface IEnvConfig {
+export interface IEnvConfig extends NuxtConfConfigObject {
   NUXT_APP_ENV: 'development' | 'ft' | 'production'
   NUXT_APP_BASE_API: string
   proxy?: {
     options: ProxyOptions
   }
-
-  multiCache?: {
-    private?: boolean
+  multiCache?: NuxtConfValue<{
     routeCache?: boolean
     componentCache?: boolean
     apiAuthorization?: string
     debug?: boolean
-  }
-}
-
-export default async function (env?: string): Promise<IEnvConfig> {
-  if (env === 'development') {
-    return (await import('./env/env.development')).default
-  }
-  else if (env === 'ft') {
-    return (await import('./env/env.ft')).default
-  }
-  else if (env === 'production') {
-    return (await import('./env/env.production')).default
-  }
-
-  return devConfig
+  }>
 }

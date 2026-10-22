@@ -1,7 +1,7 @@
 <template>
-  <AboutView />
+  <ShowcaseAbout />
 </template>
 
 <script lang="ts" setup>
-import AboutView from '@/explicitComponents/views/about/index.vue'
+import ShowcaseAbout from '@/views/showcase/about.vue'
 </script>

@@ -1,4 +1,29 @@
 // 自定义滚动条
+html,
+body {
+  font-family: var(--theme-font-family-base);
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--theme-font-family-title);
+}
+
+button,
+strong,
+nav,
+.eyebrow {
+  font-family: var(--theme-font-family-accent);
+}
+
 .scrollbar {
   &--base {
     &::-webkit-scrollbar {

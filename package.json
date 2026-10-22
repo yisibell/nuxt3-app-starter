@@ -22,8 +22,8 @@
   "homepage": "https://github.com/yisibell/nuxt3-app-starter",
   "scripts": {
     "pm2:docker:start": "pm2-runtime start ecosystem.config.js",
-    "pm2:start": "pm2 start ecosystem.config.cjs",
     "pm2:docker:start-ft": "pm2-runtime start ecosystem.ft.config.js",
+    "pm2:start": "pm2 start ecosystem.config.cjs",
     "pm2:start-ft": "pm2 delete NuxtAppStarter-ft || true && pm2 start ecosystem.ft.config.cjs",
     "dev": "node ./scripts/dev.js",
     "build:ft": "node ./scripts/build.js --env=ft",
@@ -39,35 +39,45 @@
   },
   "dependencies": {
     "@pinia/nuxt": "^0.9.0",
-    "countdownbar": "^1.6.0",
+    "@vueuse/components": "15.0.0",
+    "@vueuse/core": "15.0.0",
     "dayjs": "^1.11.13",
     "lodash-es": "^4.17.21",
     "swiper": "^11.2.10",
-    "vant": "^4.9.21"
+    "ufo": "^1.6.4",
+    "vant": "^4.9.21",
+    "vue": "3.5.21"
   },
   "devDependencies": {
-    "@nuxt/eslint-config": "^1.6.0",
-    "@nuxtjs/i18n": "^9.5.6",
+    "@nuxt/eslint-config": "1.16.0",
+    "@nuxt/fonts": "0.11.4",
+    "@nuxtjs/i18n": "^9.4.0",
+    "@types/lodash-es": "^4.17.12",
     "@unocss/nuxt": "^65.5.0",
     "@vant/nuxt": "^1.0.7",
     "changelogen": "^0.5.7",
     "consola": "^3.4.2",
     "cross-env": "^7.0.3",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^9.31.0",
-    "eslint-plugin-format": "^1.0.1",
+    "eslint": "9.39.4",
+    "eslint-plugin-format": "2.0.1",
+    "eslint-plugin-regexp": "3.1.1",
+    "eslint-plugin-vuejs-accessibility": "2.6.0",
     "execa": "^9.6.0",
     "minimist": "^1.2.8",
     "nuxt": "3.16.2",
+    "nuxt-font-fallback": "1.1.2",
     "nuxt-multi-cache": "^3.4.0",
+    "nuxt-preload-pruner": "^1.1.1",
     "nuxt-proxy-request": "^2.1.0",
-    "nuxt-svg-icons": "^2.5.0",
-    "prettier": "^3.6.2",
+    "nuxt-spritesmith": "2.1.1",
+    "nuxt-svg-icons": "^3.3.1",
+    "ohash": "2.0.12",
     "sass": "^1.89.2",
     "unocss": "^65.5.0",
     "unstorage": "^1.16.1"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=22.0.0 <25.0.0"
   }
 }

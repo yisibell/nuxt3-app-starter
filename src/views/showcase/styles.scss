@@ -1,0 +1,70 @@
+$ink: #181922;
+$muted: #777785;
+$soft: #aaaab5;
+$line: #e5e4e2;
+$accent: #7568ee;
+$coral: #f58b6e;
+
+.section-shell {
+  width: min(1120px, calc(100% - 48px));
+  margin: 0 auto;
+}
+.showcase-page {
+  min-height: 100vh;
+  overflow: hidden;
+  color: $ink;
+  background: #fbfaf8;
+}
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 26px 0;
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: $ink;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+.brand-mark {
+  display: grid;
+  place-content: center;
+  width: 29px;
+  height: 29px;
+  border-radius: 9px;
+  color: white;
+  background: $accent;
+  font-size: 15px;
+}
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+.nav-links a {
+  color: $muted;
+  font-size: 13px;
+  font-weight: 700;
+}
+.nav-links a:hover {
+  color: $ink;
+}
+.eyebrow {
+  margin: 0;
+  color: $accent;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.eyebrow span {
+  display: inline-block;
+  width: 22px;
+  height: 1px;
+  margin-right: 8px;
+  vertical-align: middle;
+  background: currentColor;
+}
