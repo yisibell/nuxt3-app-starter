@@ -8,3 +8,8 @@ node_modules
 dist
 *.local.ts
 *.local
+
+# tmp file
+tmp/
+version.json
+src/public/sprites/

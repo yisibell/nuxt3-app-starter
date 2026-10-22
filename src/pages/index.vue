@@ -1,7 +1,7 @@
 <template>
-  <HomeView />
+  <ShowcaseHome />
 </template>
 
 <script lang="ts" setup>
-import HomeView from '@/explicitComponents/views/home/index.vue'
+import ShowcaseHome from '@/views/showcase/index.vue'
 </script>

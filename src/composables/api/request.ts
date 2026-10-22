@@ -80,8 +80,13 @@ const useRequest = () => {
     })
   }
 
+  const requestRaw = <T>(url: IFetchMethodParams[0], opts?: IFetchMethodParams[1]) => {
+    return fetchInstance<T>(url, opts)
+  }
+
   return {
     request,
+    requestRaw,
   }
 }
 
