@@ -1,6 +1,6 @@
 {
   "name": "nuxt3-app-starter",
-  "version": "1.9.0",
+  "version": "1.10.0",
   "description": "A Nuxt(3) app starter!",
   "author": {
     "name": "yisibell",
@@ -66,6 +66,7 @@
     "execa": "^9.6.0",
     "minimist": "^1.2.8",
     "nuxt": "3.16.2",
+    "nuxt-conf": "^1.1.0",
     "nuxt-font-fallback": "1.1.2",
     "nuxt-multi-cache": "^3.4.0",
     "nuxt-preload-pruner": "^1.1.1",

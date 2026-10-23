@@ -9,7 +9,7 @@ const activeEnv = process.env.NUXT_APP_ENV || 'development'
 export default defineNuxtConfig({
   modules: [
     [
-      '~/modules/conf/module',
+      'nuxt-conf',
       {
         nuxtOptions: {
           proxy: 'proxy',

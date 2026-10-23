@@ -1,4 +1,56 @@
 # CHANGE LOG
+## v1.10.0
+
+[compare changes](https://github.com/yisibell/nuxt3-app-starter/compare/v1.9.0...v1.10.0)
+
+### 🚀 Enhancements
+
+- Up to nuxt 3.14 ([51254d1](https://github.com/yisibell/nuxt3-app-starter/commit/51254d1))
+- Add login page ([87dc7ed](https://github.com/yisibell/nuxt3-app-starter/commit/87dc7ed))
+- Using async config load ([1a009f5](https://github.com/yisibell/nuxt3-app-starter/commit/1a009f5))
+- Add api repo ([7a7a005](https://github.com/yisibell/nuxt3-app-starter/commit/7a7a005))
+- 登录收货提示 ([9bb9767](https://github.com/yisibell/nuxt3-app-starter/commit/9bb9767))
+- 购物车 ([d1fe5b9](https://github.com/yisibell/nuxt3-app-starter/commit/d1fe5b9))
+- 订单列表页 ([6e4aa02](https://github.com/yisibell/nuxt3-app-starter/commit/6e4aa02))
+- 售后 ([dc70d19](https://github.com/yisibell/nuxt3-app-starter/commit/dc70d19))
+- 优化页面UI ([2ff9775](https://github.com/yisibell/nuxt3-app-starter/commit/2ff9775))
+- Update UI ([7fc2f16](https://github.com/yisibell/nuxt3-app-starter/commit/7fc2f16))
+- 搜索优化，支持搜索历史 ([a2d607e](https://github.com/yisibell/nuxt3-app-starter/commit/a2d607e))
+- Eslint formatter; 商品列表优化 ([0ee84ef](https://github.com/yisibell/nuxt3-app-starter/commit/0ee84ef))
+- Demo ([3a7b63d](https://github.com/yisibell/nuxt3-app-starter/commit/3a7b63d))
+- Catch nested routes all ([e8396e2](https://github.com/yisibell/nuxt3-app-starter/commit/e8396e2))
+- I18n ([e65f149](https://github.com/yisibell/nuxt3-app-starter/commit/e65f149))
+- I18n and cache ([ddff0f2](https://github.com/yisibell/nuxt3-app-starter/commit/ddff0f2))
+- Unocss ([c08da08](https://github.com/yisibell/nuxt3-app-starter/commit/c08da08))
+- Preload css ([4ead73f](https://github.com/yisibell/nuxt3-app-starter/commit/4ead73f))
+- Big updating ([e836c11](https://github.com/yisibell/nuxt3-app-starter/commit/e836c11))
+- Using nuxt-conf for env config ([8acf7b7](https://github.com/yisibell/nuxt3-app-starter/commit/8acf7b7))
+
+### 🔥 Performance
+
+- Improve lcp ([b847062](https://github.com/yisibell/nuxt3-app-starter/commit/b847062))
+- Improve lcp test ([724a1f8](https://github.com/yisibell/nuxt3-app-starter/commit/724a1f8))
+- Improve lcp test ([1cdcf93](https://github.com/yisibell/nuxt3-app-starter/commit/1cdcf93))
+
+### 🩹 Fixes
+
+- Request util res type ([cc0ef28](https://github.com/yisibell/nuxt3-app-starter/commit/cc0ef28))
+- Run via pm2 error ([d03a8d4](https://github.com/yisibell/nuxt3-app-starter/commit/d03a8d4))
+- Stepper and input-number ([a2f8b2e](https://github.com/yisibell/nuxt3-app-starter/commit/a2f8b2e))
+- 购物车UI; scss API 警告问题 ([4c85dec](https://github.com/yisibell/nuxt3-app-starter/commit/4c85dec))
+- Proxy demo ([3691e4f](https://github.com/yisibell/nuxt3-app-starter/commit/3691e4f))
+
+### 🏡 Chore
+
+- Update config ([41f54a4](https://github.com/yisibell/nuxt3-app-starter/commit/41f54a4))
+- Update pm2 config ([b657057](https://github.com/yisibell/nuxt3-app-starter/commit/b657057))
+- Pkg ([391a180](https://github.com/yisibell/nuxt3-app-starter/commit/391a180))
+
+### ❤️ Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+- Elenh <yisiwings@163.com>
+
 ## v1.9.0
 
 [compare changes](https://github.com/yisibell/nuxt3-app-starter/compare/v1.8.0...v1.9.0)

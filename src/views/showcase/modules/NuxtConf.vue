@@ -101,7 +101,7 @@
           <p>Nuxt options 的映射用于把配置交给其他 Nuxt Module。</p>
         </div>
         <pre class="config-code"><code>modules: [
-  ['~/modules/conf/module', {
+  ['nuxt-conf', {
     nuxtOptions: {
       proxy: 'proxy',
       multiCache: 'multiCache',
