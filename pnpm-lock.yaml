@@ -87,6 +87,9 @@ importers:
       nuxt:
         specifier: 3.16.2
         version: 3.16.2(@parcel/watcher@2.5.1)(@types/node@24.8.1)(db0@0.3.4)(eslint@9.39.4(jiti@2.6.1))(ioredis@5.8.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.52.5)(sass@1.93.2)(terser@5.51.2)(typescript@5.9.3)(vite@6.4.0(@types/node@24.8.1)(jiti@2.6.1)(sass@1.93.2)(terser@5.51.2)(yaml@2.8.1))(yaml@2.8.1)
+      nuxt-conf:
+        specifier: ^1.1.0
+        version: 1.1.0(magicast@0.3.5)
       nuxt-font-fallback:
         specifier: 1.1.2
         version: 1.1.2(magicast@0.3.5)
@@ -3658,6 +3661,10 @@ packages:
     resolution: {integrity: sha512-ekilCSN1jwRvIbgeg/57YFh8qQDNbwDb9xT/qu2DAHbFFZUicIl4ygVaAvzveMhMVr3LnpSKTNnwt8PoOfmKhQ==}
     hasBin: true
 
+  jiti@2.7.0:
+    resolution: {integrity: sha512-AC/7JofJvZGrrneWNaEnJeOLUx+JlGt7tNa0wZiRPT4MY1wmfKjt2+6O2p2uz2+skll8OZZmJMNqeke7kKbNgQ==}
+    hasBin: true
+
   jpeg-js@0.4.4:
     resolution: {integrity: sha512-WZzeDOEtTOBK4Mdsar0IqEU5sMr3vSV2RqkAIzUEV2BHnUfKGyswWFPFwK5EeDo93K3FohSHbLAjj0s1Wzd+dg==}
 
@@ -3793,6 +3800,9 @@ packages:
 
   lodash-es@4.17.21:
     resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
+
+  lodash-es@4.18.1:
+    resolution: {integrity: sha512-J8xewKD/Gk22OZbhpOVSwcs60zhd95ESDwezOFuA3/099925PdHJ7OFHNTGtajL3AlZkykD32HykiMo+BIBI8A==}
 
   lodash.defaults@4.2.0:
     resolution: {integrity: sha512-qjxPLHd3r5DnsdGacqOMU6pb/avJzdh9tFX2ymgoZE27BmjXrNy/y4LoaiTeAb+O3gL8AfpJGtqfX/ae2leYYQ==}
@@ -4090,6 +4100,9 @@ packages:
 
   nth-check@2.1.1:
     resolution: {integrity: sha512-lqjrjmaOoAnWfMmBPL+XNnynZh2+swxiX3WUE0s4yEHI6m+AwrK2UZOimIRl3X/4QctVqS8AiZjFqyOGrMXb/w==}
+
+  nuxt-conf@1.1.0:
+    resolution: {integrity: sha512-P+l/kfriMD3SHN3QA4Spj55RFjBhawQaIVSnPntM281FGxnpx2yXOWPuiJgOloAHhHUiheQOw92zSKokhrH9Gw==}
 
   nuxt-font-fallback@1.1.2:
     resolution: {integrity: sha512-8vphnn9ozkqZLc7aND7mPNyZdwP4kfRSVdQ12n+qUml6N07w1iXF3KVCzB2nLSbrIHF/1RIBQko75MUxFYbvSA==}
@@ -9717,6 +9730,8 @@ snapshots:
 
   jiti@2.6.1: {}
 
+  jiti@2.7.0: {}
+
   jpeg-js@0.4.4: {}
 
   js-tokens@4.0.0: {}
@@ -9853,6 +9868,8 @@ snapshots:
       p-locate: 5.0.0
 
   lodash-es@4.17.21: {}
+
+  lodash-es@4.18.1: {}
 
   lodash.defaults@4.2.0: {}
 
@@ -10186,6 +10203,17 @@ snapshots:
   nth-check@2.1.1:
     dependencies:
       boolbase: 1.0.0
+
+  nuxt-conf@1.1.0(magicast@0.3.5):
+    dependencies:
+      '@nuxt/kit': 3.19.3(magicast@0.3.5)
+      defu: 6.1.7
+      jiti: 2.7.0
+      lodash-es: 4.18.1
+      ohash: 2.0.12
+      ufo: 1.6.4
+    transitivePeerDependencies:
+      - magicast
 
   nuxt-font-fallback@1.1.2(magicast@0.3.5):
     dependencies:
@@ -11133,7 +11161,7 @@ snapshots:
 
   serve-placeholder@2.0.2:
     dependencies:
-      defu: 6.1.4
+      defu: 6.1.7
 
   serve-static@2.2.0:
     dependencies:
@@ -11574,7 +11602,7 @@ snapshots:
 
   unenv@2.0.0-rc.21:
     dependencies:
-      defu: 6.1.4
+      defu: 6.1.7
       exsolve: 1.0.7
       ohash: 2.0.12
       pathe: 2.0.3

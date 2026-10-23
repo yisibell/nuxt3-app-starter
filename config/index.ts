@@ -1,5 +1,5 @@
 import type { ProxyOptions } from 'nuxt-proxy-request'
-import type { NuxtConfConfigObject, NuxtConfValue } from '../src/modules/conf/types'
+import type { NuxtConfConfigObject, NuxtConfValue } from 'nuxt-conf'
 
 export interface IEnvConfig extends NuxtConfConfigObject {
   NUXT_APP_ENV: 'development' | 'ft' | 'production'
